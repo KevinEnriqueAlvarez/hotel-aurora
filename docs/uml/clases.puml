@@ -60,13 +60,46 @@ package "Comun" {
 }
 
 package "Dominio" {
-  enum TipoDocumento { Dpi; Pasaporte }
-  enum RolUsuario { Administrador; Recepcionista }
-  enum TipoHabitacion { Sencilla; Doble; Suite; Familiar }
-  enum EstadoHabitacion { Disponible; Ocupada; Limpieza; Mantenimiento }
-  enum EstadoReserva { Pendiente; Confirmada; EnCurso; Finalizada; Cancelada }
-  enum CategoriaServicio { Restaurante; Minibar; Lavanderia; Spa; Transporte; Otro }
-  enum EstadoFactura { Emitida; Pagada; Anulada }
+  enum TipoDocumento {
+    Dpi
+    Pasaporte
+  }
+  enum RolUsuario {
+    Administrador
+    Recepcionista
+  }
+  enum TipoHabitacion {
+    Sencilla
+    Doble
+    Suite
+    Familiar
+  }
+  enum EstadoHabitacion {
+    Disponible
+    Ocupada
+    Limpieza
+    Mantenimiento
+  }
+  enum EstadoReserva {
+    Pendiente
+    Confirmada
+    EnCurso
+    Finalizada
+    Cancelada
+  }
+  enum CategoriaServicio {
+    Restaurante
+    Minibar
+    Lavanderia
+    Spa
+    Transporte
+    Otro
+  }
+  enum EstadoFactura {
+    Emitida
+    Pagada
+    Anulada
+  }
 
   abstract class EntidadBase {
     +Id : int
@@ -318,7 +351,11 @@ package "Servicios" {
   class IndicadoresInicio <<record>>
   class PuntoMensual <<record>>
   class ConteoEstado <<record>>
-  enum SerieReporte { Ingresos; Reservas; Ocupacion }
+  enum SerieReporte {
+    Ingresos
+    Reservas
+    Ocupacion
+  }
 }
 
 IValidable <|.. EntidadBase
