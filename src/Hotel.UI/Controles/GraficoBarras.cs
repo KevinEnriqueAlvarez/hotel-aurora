@@ -45,7 +45,7 @@ public class GraficoBarras : ControlDibujado
     /// <inheritdoc />
     protected override void Dibujar(Graphics g)
     {
-        const int izquierda = 46, derecha = 8, arriba = 26, abajo = 40;
+        const int izquierda = 58, derecha = 8, arriba = 26, abajo = 40;
         var area = new RectangleF(izquierda, arriba, Width - izquierda - derecha, Height - arriba - abajo);
         if (area.Width <= 0 || area.Height <= 0) return;
 
@@ -65,8 +65,8 @@ public class GraficoBarras : ControlDibujado
             var barra = new RectangleF(x, area.Bottom - altura, anchoBarra, Math.Max(altura, 0));
             DibujarBarra(g, barra, d.Destacada);
             if (d.Destacada && d.Valor > 0)
-                GraficosUtil.TextoCentrado(g, "Q" + FormatoValor(d.Valor), Tipografia.EtiquetaPequena, Paleta.Marino,
-                    new RectangleF(x - 14, barra.Top - 22, anchoBarra + 28, 20));
+                GraficosUtil.TextoCentrado(g, FormatoValor(d.Valor), Tipografia.EtiquetaPequena, Paleta.Marino,
+                    new RectangleF(x - 30, barra.Top - 22, anchoBarra + 60, 20));
             DibujarEtiquetaX(g, d, new RectangleF(area.X + i * ranura + 2, area.Bottom + 10, ranura - 4, 22));
         }
     }
