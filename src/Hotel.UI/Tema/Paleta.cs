@@ -50,7 +50,7 @@ public static class Paleta
     /// <remarks>Sección 10.2: colores de estado</remarks>
     public static Color ColorDeEstado(string? estado) => estado switch
     {
-        nameof(EstadoHabitacion.Disponible) or nameof(EstadoReserva.EnCurso) or nameof(EstadoFactura.Pagada) => Teal,
+        nameof(EstadoHabitacion.Disponible) or nameof(EstadoReserva.EnCurso) or nameof(EstadoFactura.Pagada) or "Activo" => Teal,
         nameof(EstadoHabitacion.Ocupada) => Marino,
         "Reservada hoy" or nameof(EstadoReserva.Confirmada) or nameof(EstadoFactura.Emitida) => Azul,
         nameof(EstadoHabitacion.Limpieza) or nameof(EstadoReserva.Finalizada) => Pizarra,

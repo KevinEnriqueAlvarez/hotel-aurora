@@ -1,3 +1,4 @@
+using System.Globalization;
 using Hotel.Core.Comun;
 using Hotel.Core.Datos;
 using Hotel.Core.Servicios;
@@ -15,6 +16,8 @@ static class Program
     [STAThread]
     static void Main()
     {
+        CultureInfo.DefaultThreadCurrentCulture = CultureInfo.DefaultThreadCurrentUICulture = Constantes.Cultura;
+        CultureInfo.CurrentCulture = CultureInfo.CurrentUICulture = Constantes.Cultura;
         ApplicationConfiguration.Initialize();
         Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
         Application.ThreadException += (_, e) => ManejarError(e.Exception, "ThreadException");

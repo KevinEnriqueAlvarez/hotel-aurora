@@ -104,7 +104,7 @@ namespace Hotel.UI.Formularios
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlContenido;
+        protected System.Windows.Forms.Panel pnlContenido;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlPie;
         private Hotel.UI.Controles.BotonModerno btnCancelar;
