@@ -77,6 +77,9 @@ public partial class VistaListadoBase : VistaBase
         Estilizador.AplicarCampos(flpFiltros);
     }
 
+    /// <summary>Reemplaza el texto del contador (p. ej. con totales del periodo).</summary>
+    protected void EstablecerResumen(string texto) => lblContador.Text = texto;
+
     /// <summary>Carga los datos; las vistas hijas lo sobrescriben.</summary>
     protected virtual void CargarDatos() { }
 

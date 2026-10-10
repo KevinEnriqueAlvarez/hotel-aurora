@@ -152,6 +152,8 @@ public partial class VistaRecepcion : VistaBase
 
     private void AbrirFactura(Factura factura)
     {
-        Mensajes.Exito(FindForm(), $"Factura {factura.Numero} generada por {Constantes.FormatearMoneda(factura.Total)}.");
+        if (_s is null) return;
+        using var form = new FormFacturaDetalle(_s, factura.Id);
+        form.ShowDialog(FindForm());
     }
 }
