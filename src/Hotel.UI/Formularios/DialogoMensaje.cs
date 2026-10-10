@@ -3,9 +3,6 @@ using Hotel.UI.Tema;
 
 namespace Hotel.UI.Formularios;
 
-/// <summary>Tipo de mensaje del <see cref="DialogoMensaje"/>.</summary>
-public enum TipoMensaje { Informacion, Exito, Advertencia, Error, Confirmacion }
-
 /// <summary>Diálogo de mensajes con el tema de la aplicación.</summary>
 /// <remarks>Sección 10.6; RNF-09</remarks>
 public partial class DialogoMensaje : Form

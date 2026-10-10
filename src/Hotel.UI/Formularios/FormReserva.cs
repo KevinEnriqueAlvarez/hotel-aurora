@@ -79,6 +79,18 @@ public partial class FormReserva : FormularioBase
         }
     }
 
+    /// <summary>Al mostrarse, la lista de huéspedes no debe traer ninguno elegido por defecto.</summary>
+    protected override void OnShown(EventArgs e)
+    {
+        base.OnShown(e);
+        if (_original is not null) return;
+        tablaHuespedes.CurrentCell = null;
+        tablaHuespedes.ClearSelection();
+        _huespedId = null;
+        _huespedNombre = "";
+        ActualizarResumen();
+    }
+
     private static DateTime Min(DateTime a, DateTime b) => a < b ? a : b;
 
     private int Noches => Math.Max(0, (dtpSalida.Value.Date - dtpEntrada.Value.Date).Days);
@@ -97,6 +109,8 @@ public partial class FormReserva : FormularioBase
             h.Id, h.Numero, h.Piso, h.Tipo.ToString(), h.Capacidad,
             Constantes.FormatearMoneda(h.TarifaNoche), Constantes.FormatearMoneda(h.TarifaNoche * Noches))).ToList();
         if (tablaHabitaciones.Columns["Id"] is { } id) id.Visible = false;
+        tablaHabitaciones.CurrentCell = null;   // la persona debe elegir la habitación a propósito
+        tablaHabitaciones.ClearSelection();
 
         lblDisponibles.Text = _disponibles.Count == 0
             ? "No hay habitaciones disponibles con esos criterios."
@@ -104,7 +118,7 @@ public partial class FormReserva : FormularioBase
         if (_original is not null)
             foreach (DataGridViewRow fila in tablaHabitaciones.Rows)
                 if (fila.DataBoundItem is FilaHabitacion f && f.Id == _original.HabitacionId)
-                    fila.Selected = true;
+                    tablaHabitaciones.CurrentCell = fila.Cells.Cast<DataGridViewCell>().First(c => c.Visible);
         ActualizarResumen();
     }
 
@@ -114,6 +128,11 @@ public partial class FormReserva : FormularioBase
         tablaHuespedes.DataSource = _s.Huespedes.Buscar(txtBuscarHuesped.Text).Take(50)
             .Select(h => new FilaHuesped(h.Id, h.NombreCompleto, $"{h.TipoDocumento}: {h.NumeroDocumento}", h.Telefono)).ToList();
         if (tablaHuespedes.Columns["Id"] is { } id) id.Visible = false;
+        tablaHuespedes.CurrentCell = null;
+        tablaHuespedes.ClearSelection();
+        _huespedId = null;
+        _huespedNombre = "";
+        ActualizarResumen();
     }
 
     private Habitacion? HabitacionSeleccionada =>
@@ -200,9 +219,12 @@ public partial class FormReserva : FormularioBase
         if (_s is null) return;
         using var form = new FormHuesped(_s);
         if (form.ShowDialog(this) != DialogResult.OK || form.Resultado is null) return;
+        txtBuscarHuesped.Text = form.Resultado.NombreCompleto;   // recarga la lista (y limpia la selección)
         _huespedId = form.Resultado.Id;
         _huespedNombre = form.Resultado.NombreCompleto;
-        txtBuscarHuesped.Text = form.Resultado.NombreCompleto;
+        foreach (DataGridViewRow fila in tablaHuespedes.Rows)
+            if (fila.DataBoundItem is FilaHuesped f && f.Id == form.Resultado.Id)
+                tablaHuespedes.CurrentCell = fila.Cells.Cast<DataGridViewCell>().First(c => c.Visible);
         ActualizarResumen();
     }
 

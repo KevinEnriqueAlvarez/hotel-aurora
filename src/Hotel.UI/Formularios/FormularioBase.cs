@@ -36,7 +36,18 @@ public partial class FormularioBase : Form
     public string TextoGuardar
     {
         get => btnGuardar.Text;
-        set => btnGuardar.Text = value;
+        set
+        {
+            btnGuardar.Text = value;
+            // Ensancha el botón (hacia la izquierda) si el texto no cabe; medidas en unidades de diseño.
+            var factor = DeviceDpi / 96f;
+            var necesario = (int)((TextRenderer.MeasureText(value, btnGuardar.Font).Width + 60) / factor);
+            if (necesario <= btnGuardar.Width) return;
+            var derecha = btnGuardar.Right;
+            btnGuardar.Width = necesario;
+            btnGuardar.Left = derecha - necesario;
+            btnCancelar.Left = btnGuardar.Left - 8 - btnCancelar.Width;
+        }
     }
 
     /// <summary>Muestra u oculta el botón Cancelar (diálogos solo informativos).</summary>

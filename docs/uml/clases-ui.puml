@@ -1,0 +1,118 @@
+@startuml clases-ui
+title Hotel Aurora — Diagrama de clases (Hotel.UI)
+skinparam classAttributeIconSize 0
+
+package "Tema" {
+  class Paleta <<static>>
+  class Tipografia <<static>>
+  class GraficosUtil <<static>>
+  class Estilizador <<static>> {
+    +AplicarTabla(tabla : DataGridView)
+    +AplicarCampos(raiz : Control)
+  }
+}
+
+package "Controles" {
+  abstract class ControlDibujado
+  class PanelTarjeta
+  class BotonModerno
+  class BotonNavegacion
+  class InsigniaEstado
+  class SelectorSegmentado
+  class GraficoBarras
+  class GraficoDona
+  class TarjetaKpi
+  class BarraProgreso
+  ControlDibujado <|-- BotonModerno
+  ControlDibujado <|-- BotonNavegacion
+  ControlDibujado <|-- InsigniaEstado
+  ControlDibujado <|-- SelectorSegmentado
+  ControlDibujado <|-- GraficoBarras
+  ControlDibujado <|-- GraficoDona
+  ControlDibujado <|-- TarjetaKpi
+  ControlDibujado <|-- BarraProgreso
+}
+
+package "Formularios" {
+  class FormularioBase {
+    #Contenido : Panel
+    #Errores : ErrorProvider
+    #Guardar() : bool
+    #Validar(campo, regla)
+    #ValidarTodo() : bool
+    #Procesar(resultado) : bool
+  }
+  class FormHabitacion
+  class FormHuesped
+  class FormHuespedDetalle
+  class FormUsuario
+  class FormReserva
+  class FormCheckIn
+  class FormCargo
+  class FormCheckOut
+  class FormPago
+  class FormFacturaDetalle
+  class FormEntradaTexto
+  class DialogoMensaje
+  class Mensajes <<static>>
+  class FormLogin
+  class FormPrincipal
+  class ImpresorFactura
+  FormularioBase <|-- FormHabitacion
+  FormularioBase <|-- FormHuesped
+  FormularioBase <|-- FormHuespedDetalle
+  FormularioBase <|-- FormUsuario
+  FormularioBase <|-- FormReserva
+  FormularioBase <|-- FormCheckIn
+  FormularioBase <|-- FormCargo
+  FormularioBase <|-- FormCheckOut
+  FormularioBase <|-- FormPago
+  FormularioBase <|-- FormFacturaDetalle
+  FormularioBase <|-- FormEntradaTexto
+  Mensajes ..> DialogoMensaje
+  FormFacturaDetalle ..> ImpresorFactura
+}
+
+package "Vistas" {
+  class VistaBase {
+    +TituloVista : string
+    +Refrescar()
+  }
+  class VistaListadoBase {
+    #CargarDatos()
+    #Nuevo()
+    #Editar()
+    #Eliminar()
+    #VerDetalle()
+  }
+  class VistaInicio
+  class VistaHabitaciones
+  class VistaHuespedes
+  class VistaReservas
+  class VistaRecepcion
+  class VistaFacturacion
+  class VistaUsuarios
+  VistaBase <|-- VistaListadoBase
+  VistaBase <|-- VistaInicio
+  VistaBase <|-- VistaRecepcion
+  VistaListadoBase <|-- VistaHabitaciones
+  VistaListadoBase <|-- VistaHuespedes
+  VistaListadoBase <|-- VistaReservas
+  VistaListadoBase <|-- VistaFacturacion
+  VistaListadoBase <|-- VistaUsuarios
+}
+
+class Program <<static>>
+class "ServiciosHotel\n(Hotel.Core)" as SH
+
+Program ..> SH : compone
+FormPrincipal --> VistaBase : carga
+FormPrincipal ..> SH
+VistaBase ..> SH
+FormularioBase ..> Estilizador
+VistaListadoBase ..> Estilizador
+VistaInicio *-- GraficoBarras
+VistaInicio *-- GraficoDona
+VistaInicio *-- TarjetaKpi
+VistaInicio *-- BarraProgreso
+@enduml

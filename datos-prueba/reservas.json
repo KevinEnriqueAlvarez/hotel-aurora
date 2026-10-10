@@ -1,0 +1,1169 @@
+[
+  {
+    "codigo": "RES-000001",
+    "huespedId": 19,
+    "habitacionId": 10,
+    "fechaEntrada": "2026-02-13T00:00:00-06:00",
+    "fechaSalida": "2026-02-16T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 800,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-02-13T14:00:00-06:00",
+    "fechaCheckOut": "2026-02-16T11:00:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180,
+        "fecha": "2026-02-13T14:30:00-06:00"
+      },
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 1,
+        "precioUnitario": 250,
+        "fecha": "2026-02-13T15:00:00-06:00"
+      },
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80,
+        "fecha": "2026-02-13T15:30:00-06:00"
+      }
+    ],
+    "id": 1,
+    "fechaCreacion": "2026-02-10T09:00:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000002",
+    "huespedId": 3,
+    "habitacionId": 20,
+    "fechaEntrada": "2026-02-12T00:00:00-06:00",
+    "fechaSalida": "2026-02-16T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1500,
+    "estado": "Cancelada",
+    "motivoCancelacion": "Viaje cancelado por el cliente.",
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 2,
+    "fechaCreacion": "2026-02-10T09:31:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000003",
+    "huespedId": 4,
+    "habitacionId": 1,
+    "fechaEntrada": "2026-02-22T00:00:00-06:00",
+    "fechaSalida": "2026-02-26T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 350,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-02-22T14:01:00-06:00",
+    "fechaCheckOut": "2026-02-26T11:01:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 2,
+        "precioUnitario": 80,
+        "fecha": "2026-02-22T14:31:00-06:00"
+      },
+      {
+        "servicioId": 1,
+        "descripcion": "Desayuno buffet",
+        "cantidad": 3,
+        "precioUnitario": 65,
+        "fecha": "2026-02-22T15:01:00-06:00"
+      },
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180,
+        "fecha": "2026-02-22T15:31:00-06:00"
+      }
+    ],
+    "id": 3,
+    "fechaCreacion": "2026-02-16T09:01:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000004",
+    "huespedId": 1,
+    "habitacionId": 12,
+    "fechaEntrada": "2026-03-05T00:00:00-06:00",
+    "fechaSalida": "2026-03-07T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 680,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-03-05T14:02:00-06:00",
+    "fechaCheckOut": "2026-03-07T11:02:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 10,
+        "descripcion": "Cóctel de bienvenida",
+        "cantidad": 3,
+        "precioUnitario": 45,
+        "fecha": "2026-03-05T14:32:00-06:00"
+      },
+      {
+        "servicioId": 1,
+        "descripcion": "Desayuno buffet",
+        "cantidad": 2,
+        "precioUnitario": 65,
+        "fecha": "2026-03-05T15:02:00-06:00"
+      },
+      {
+        "servicioId": 1,
+        "descripcion": "Desayuno buffet",
+        "cantidad": 1,
+        "precioUnitario": 65,
+        "fecha": "2026-03-05T15:32:00-06:00"
+      }
+    ],
+    "id": 4,
+    "fechaCreacion": "2026-03-01T09:02:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000005",
+    "huespedId": 5,
+    "habitacionId": 14,
+    "fechaEntrada": "2026-03-08T00:00:00-06:00",
+    "fechaSalida": "2026-03-11T00:00:00-06:00",
+    "cantidadPersonas": 3,
+    "tarifaPactada": 900,
+    "estado": "Cancelada",
+    "motivoCancelacion": "El huésped canceló por cambio de planes.",
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 5,
+    "fechaCreacion": "2026-03-03T09:30:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000006",
+    "huespedId": 17,
+    "habitacionId": 19,
+    "fechaEntrada": "2026-03-15T00:00:00-06:00",
+    "fechaSalida": "2026-03-20T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1400,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-03-15T14:03:00-06:00",
+    "fechaCheckOut": "2026-03-20T11:03:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 7,
+        "descripcion": "Masaje relajante",
+        "cantidad": 3,
+        "precioUnitario": 350,
+        "fecha": "2026-03-15T14:33:00-06:00"
+      }
+    ],
+    "id": 6,
+    "fechaCreacion": "2026-03-10T09:03:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000007",
+    "huespedId": 3,
+    "habitacionId": 15,
+    "fechaEntrada": "2026-03-24T00:00:00-06:00",
+    "fechaSalida": "2026-03-25T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1100,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-03-24T14:04:00-06:00",
+    "fechaCheckOut": "2026-03-25T11:04:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 1,
+        "precioUnitario": 120,
+        "fecha": "2026-03-24T14:34:00-06:00"
+      },
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 2,
+        "precioUnitario": 120,
+        "fecha": "2026-03-24T15:04:00-06:00"
+      }
+    ],
+    "id": 7,
+    "fechaCreacion": "2026-03-18T09:04:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000008",
+    "huespedId": 18,
+    "habitacionId": 1,
+    "fechaEntrada": "2026-04-02T00:00:00-06:00",
+    "fechaSalida": "2026-04-03T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 350,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-04-02T14:05:00-06:00",
+    "fechaCheckOut": "2026-04-03T11:05:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 3,
+        "precioUnitario": 120,
+        "fecha": "2026-04-02T14:35:00-06:00"
+      },
+      {
+        "servicioId": 2,
+        "descripcion": "Almuerzo ejecutivo",
+        "cantidad": 1,
+        "precioUnitario": 95,
+        "fecha": "2026-04-02T15:05:00-06:00"
+      },
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 3,
+        "precioUnitario": 120,
+        "fecha": "2026-04-02T15:35:00-06:00"
+      }
+    ],
+    "id": 8,
+    "fechaCreacion": "2026-03-29T09:05:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000009",
+    "huespedId": 17,
+    "habitacionId": 4,
+    "fechaEntrada": "2026-04-13T00:00:00-06:00",
+    "fechaSalida": "2026-04-16T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 540,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-04-13T14:06:00-06:00",
+    "fechaCheckOut": "2026-04-16T11:06:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250,
+        "fecha": "2026-04-13T14:36:00-06:00"
+      },
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 1,
+        "precioUnitario": 120,
+        "fecha": "2026-04-13T15:06:00-06:00"
+      },
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 1,
+        "precioUnitario": 120,
+        "fecha": "2026-04-13T15:36:00-06:00"
+      }
+    ],
+    "id": 9,
+    "fechaCreacion": "2026-04-08T09:06:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000010",
+    "huespedId": 18,
+    "habitacionId": 15,
+    "fechaEntrada": "2026-04-13T00:00:00-06:00",
+    "fechaSalida": "2026-04-17T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1100,
+    "estado": "Cancelada",
+    "motivoCancelacion": "Viaje cancelado por el cliente.",
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 10,
+    "fechaCreacion": "2026-04-11T09:34:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000011",
+    "huespedId": 14,
+    "habitacionId": 17,
+    "fechaEntrada": "2026-04-24T00:00:00-06:00",
+    "fechaSalida": "2026-04-25T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 1300,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-04-24T14:07:00-06:00",
+    "fechaCheckOut": "2026-04-25T11:07:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 1,
+        "descripcion": "Desayuno buffet",
+        "cantidad": 2,
+        "precioUnitario": 65,
+        "fecha": "2026-04-24T14:37:00-06:00"
+      },
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80,
+        "fecha": "2026-04-24T15:07:00-06:00"
+      }
+    ],
+    "id": 11,
+    "fechaCreacion": "2026-04-23T09:07:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000012",
+    "huespedId": 14,
+    "habitacionId": 8,
+    "fechaEntrada": "2026-05-04T00:00:00-06:00",
+    "fechaSalida": "2026-05-07T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 620,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-05-04T14:08:00-06:00",
+    "fechaCheckOut": "2026-05-07T11:08:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 2,
+        "precioUnitario": 120,
+        "fecha": "2026-05-04T14:38:00-06:00"
+      },
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 1,
+        "precioUnitario": 250,
+        "fecha": "2026-05-04T15:08:00-06:00"
+      }
+    ],
+    "id": 12,
+    "fechaCreacion": "2026-05-04T09:08:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000013",
+    "huespedId": 13,
+    "habitacionId": 11,
+    "fechaEntrada": "2026-05-14T00:00:00-06:00",
+    "fechaSalida": "2026-05-16T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 650,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-05-14T14:09:00-06:00",
+    "fechaCheckOut": "2026-05-16T11:09:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 4,
+        "descripcion": "Minibar",
+        "cantidad": 1,
+        "precioUnitario": 35,
+        "fecha": "2026-05-14T14:39:00-06:00"
+      }
+    ],
+    "id": 13,
+    "fechaCreacion": "2026-05-11T09:09:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000014",
+    "huespedId": 15,
+    "habitacionId": 12,
+    "fechaEntrada": "2026-05-22T00:00:00-06:00",
+    "fechaSalida": "2026-05-27T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 680,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-05-22T14:10:00-06:00",
+    "fechaCheckOut": "2026-05-27T11:10:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 10,
+        "descripcion": "Cóctel de bienvenida",
+        "cantidad": 2,
+        "precioUnitario": 45,
+        "fecha": "2026-05-22T14:40:00-06:00"
+      },
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 2,
+        "precioUnitario": 80,
+        "fecha": "2026-05-22T15:10:00-06:00"
+      }
+    ],
+    "id": 14,
+    "fechaCreacion": "2026-05-16T09:10:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000015",
+    "huespedId": 3,
+    "habitacionId": 2,
+    "fechaEntrada": "2026-06-02T00:00:00-06:00",
+    "fechaSalida": "2026-06-04T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 380,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-06-02T14:11:00-06:00",
+    "fechaCheckOut": "2026-06-04T11:11:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 6,
+        "descripcion": "Planchado de prenda",
+        "cantidad": 2,
+        "precioUnitario": 20,
+        "fecha": "2026-06-02T14:41:00-06:00"
+      }
+    ],
+    "id": 15,
+    "fechaCreacion": "2026-05-28T09:11:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000016",
+    "huespedId": 12,
+    "habitacionId": 3,
+    "fechaEntrada": "2026-06-12T00:00:00-06:00",
+    "fechaSalida": "2026-06-17T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 520,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-06-12T14:12:00-06:00",
+    "fechaCheckOut": "2026-06-17T11:12:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 1,
+        "precioUnitario": 80,
+        "fecha": "2026-06-12T14:42:00-06:00"
+      }
+    ],
+    "id": 16,
+    "fechaCreacion": "2026-06-10T09:12:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000017",
+    "huespedId": 7,
+    "habitacionId": 16,
+    "fechaEntrada": "2026-06-21T00:00:00-06:00",
+    "fechaSalida": "2026-06-23T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1200,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-06-21T14:13:00-06:00",
+    "fechaCheckOut": "2026-06-23T11:13:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 2,
+        "descripcion": "Almuerzo ejecutivo",
+        "cantidad": 3,
+        "precioUnitario": 95,
+        "fecha": "2026-06-21T14:43:00-06:00"
+      },
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 1,
+        "precioUnitario": 250,
+        "fecha": "2026-06-21T15:13:00-06:00"
+      }
+    ],
+    "id": 17,
+    "fechaCreacion": "2026-06-14T09:13:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000018",
+    "huespedId": 14,
+    "habitacionId": 8,
+    "fechaEntrada": "2026-07-02T00:00:00-06:00",
+    "fechaSalida": "2026-07-03T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 620,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-07-02T14:14:00-06:00",
+    "fechaCheckOut": "2026-07-03T11:14:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 3,
+        "precioUnitario": 180,
+        "fecha": "2026-07-02T14:44:00-06:00"
+      },
+      {
+        "servicioId": 2,
+        "descripcion": "Almuerzo ejecutivo",
+        "cantidad": 3,
+        "precioUnitario": 95,
+        "fecha": "2026-07-02T15:14:00-06:00"
+      }
+    ],
+    "id": 18,
+    "fechaCreacion": "2026-06-27T09:14:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000019",
+    "huespedId": 1,
+    "habitacionId": 10,
+    "fechaEntrada": "2026-07-11T00:00:00-06:00",
+    "fechaSalida": "2026-07-14T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 800,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-07-11T14:15:00-06:00",
+    "fechaCheckOut": "2026-07-14T11:15:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80,
+        "fecha": "2026-07-11T14:45:00-06:00"
+      },
+      {
+        "servicioId": 10,
+        "descripcion": "Cóctel de bienvenida",
+        "cantidad": 1,
+        "precioUnitario": 45,
+        "fecha": "2026-07-11T15:15:00-06:00"
+      }
+    ],
+    "id": 19,
+    "fechaCreacion": "2026-07-09T09:15:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000020",
+    "huespedId": 19,
+    "habitacionId": 13,
+    "fechaEntrada": "2026-07-12T00:00:00-06:00",
+    "fechaSalida": "2026-07-13T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 1050,
+    "estado": "Cancelada",
+    "motivoCancelacion": "No se recibió confirmación de pago.",
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 20,
+    "fechaCreacion": "2026-07-10T09:32:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000021",
+    "huespedId": 9,
+    "habitacionId": 19,
+    "fechaEntrada": "2026-07-23T00:00:00-06:00",
+    "fechaSalida": "2026-07-25T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1400,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-07-23T14:16:00-06:00",
+    "fechaCheckOut": "2026-07-25T11:16:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 3,
+        "precioUnitario": 180,
+        "fecha": "2026-07-23T14:46:00-06:00"
+      }
+    ],
+    "id": 21,
+    "fechaCreacion": "2026-07-16T09:16:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000022",
+    "huespedId": 11,
+    "habitacionId": 14,
+    "fechaEntrada": "2026-08-06T00:00:00-06:00",
+    "fechaSalida": "2026-08-07T00:00:00-06:00",
+    "cantidadPersonas": 3,
+    "tarifaPactada": 900,
+    "estado": "Cancelada",
+    "motivoCancelacion": "El huésped canceló por cambio de planes.",
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 22,
+    "fechaCreacion": "2026-07-31T09:33:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000023",
+    "huespedId": 2,
+    "habitacionId": 13,
+    "fechaEntrada": "2026-08-01T00:00:00-06:00",
+    "fechaSalida": "2026-08-05T00:00:00-06:00",
+    "cantidadPersonas": 3,
+    "tarifaPactada": 1050,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-08-01T14:17:00-06:00",
+    "fechaCheckOut": "2026-08-05T11:17:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 10,
+        "descripcion": "Cóctel de bienvenida",
+        "cantidad": 3,
+        "precioUnitario": 45,
+        "fecha": "2026-08-01T14:47:00-06:00"
+      }
+    ],
+    "id": 23,
+    "fechaCreacion": "2026-08-01T09:17:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000024",
+    "huespedId": 1,
+    "habitacionId": 13,
+    "fechaEntrada": "2026-08-11T00:00:00-06:00",
+    "fechaSalida": "2026-08-12T00:00:00-06:00",
+    "cantidadPersonas": 3,
+    "tarifaPactada": 1050,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-08-11T14:18:00-06:00",
+    "fechaCheckOut": "2026-08-12T11:18:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 7,
+        "descripcion": "Masaje relajante",
+        "cantidad": 3,
+        "precioUnitario": 350,
+        "fecha": "2026-08-11T14:48:00-06:00"
+      },
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80,
+        "fecha": "2026-08-11T15:18:00-06:00"
+      },
+      {
+        "servicioId": 10,
+        "descripcion": "Cóctel de bienvenida",
+        "cantidad": 1,
+        "precioUnitario": 45,
+        "fecha": "2026-08-11T15:48:00-06:00"
+      }
+    ],
+    "id": 24,
+    "fechaCreacion": "2026-08-10T09:18:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000025",
+    "huespedId": 8,
+    "habitacionId": 19,
+    "fechaEntrada": "2026-08-20T00:00:00-06:00",
+    "fechaSalida": "2026-08-25T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1400,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-08-20T14:19:00-06:00",
+    "fechaCheckOut": "2026-08-25T11:19:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 1,
+        "descripcion": "Desayuno buffet",
+        "cantidad": 2,
+        "precioUnitario": 65,
+        "fecha": "2026-08-20T14:49:00-06:00"
+      },
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250,
+        "fecha": "2026-08-20T15:19:00-06:00"
+      },
+      {
+        "servicioId": 5,
+        "descripcion": "Lavandería por docena",
+        "cantidad": 1,
+        "precioUnitario": 80,
+        "fecha": "2026-08-20T15:49:00-06:00"
+      }
+    ],
+    "id": 25,
+    "fechaCreacion": "2026-08-18T09:19:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000026",
+    "huespedId": 14,
+    "habitacionId": 18,
+    "fechaEntrada": "2026-08-30T00:00:00-06:00",
+    "fechaSalida": "2026-09-04T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 1250,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-08-30T14:20:00-06:00",
+    "fechaCheckOut": "2026-09-04T11:20:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250,
+        "fecha": "2026-08-30T14:50:00-06:00"
+      },
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180,
+        "fecha": "2026-08-30T15:20:00-06:00"
+      }
+    ],
+    "id": 26,
+    "fechaCreacion": "2026-08-29T09:20:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000027",
+    "huespedId": 2,
+    "habitacionId": 7,
+    "fechaEntrada": "2026-09-09T00:00:00-06:00",
+    "fechaSalida": "2026-09-10T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 580,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-09-09T14:21:00-06:00",
+    "fechaCheckOut": "2026-09-10T11:21:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 3,
+        "precioUnitario": 180,
+        "fecha": "2026-09-09T14:51:00-06:00"
+      }
+    ],
+    "id": 27,
+    "fechaCreacion": "2026-09-02T09:21:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000028",
+    "huespedId": 15,
+    "habitacionId": 10,
+    "fechaEntrada": "2026-09-19T00:00:00-06:00",
+    "fechaSalida": "2026-09-21T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 800,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-09-19T14:22:00-06:00",
+    "fechaCheckOut": "2026-09-21T11:22:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 10,
+        "descripcion": "Cóctel de bienvenida",
+        "cantidad": 2,
+        "precioUnitario": 45,
+        "fecha": "2026-09-19T14:52:00-06:00"
+      },
+      {
+        "servicioId": 4,
+        "descripcion": "Minibar",
+        "cantidad": 2,
+        "precioUnitario": 35,
+        "fecha": "2026-09-19T15:22:00-06:00"
+      },
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250,
+        "fecha": "2026-09-19T15:52:00-06:00"
+      }
+    ],
+    "id": 28,
+    "fechaCreacion": "2026-09-19T09:22:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000029",
+    "huespedId": 12,
+    "habitacionId": 7,
+    "fechaEntrada": "2026-09-29T00:00:00-06:00",
+    "fechaSalida": "2026-10-02T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 580,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-09-29T14:23:00-06:00",
+    "fechaCheckOut": "2026-10-02T11:23:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 2,
+        "descripcion": "Almuerzo ejecutivo",
+        "cantidad": 2,
+        "precioUnitario": 95,
+        "fecha": "2026-09-29T14:53:00-06:00"
+      }
+    ],
+    "id": 29,
+    "fechaCreacion": "2026-09-29T09:23:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000030",
+    "huespedId": 19,
+    "habitacionId": 12,
+    "fechaEntrada": "2026-10-06T00:00:00-06:00",
+    "fechaSalida": "2026-10-09T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 680,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-10-06T14:25:00-06:00",
+    "fechaCheckOut": "2026-10-09T11:25:00-06:00",
+    "cargos": [
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180,
+        "fecha": "2026-10-06T14:55:00-06:00"
+      },
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 2,
+        "precioUnitario": 180,
+        "fecha": "2026-10-06T15:25:00-06:00"
+      }
+    ],
+    "id": 30,
+    "fechaCreacion": "2026-09-30T09:25:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000031",
+    "huespedId": 4,
+    "habitacionId": 1,
+    "fechaEntrada": "2026-10-10T00:00:00-06:00",
+    "fechaSalida": "2026-10-13T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 350,
+    "estado": "Confirmada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 31,
+    "fechaCreacion": "2026-10-04T09:51:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000032",
+    "huespedId": 1,
+    "habitacionId": 16,
+    "fechaEntrada": "2026-10-10T00:00:00-06:00",
+    "fechaSalida": "2026-10-14T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 1200,
+    "estado": "EnCurso",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-10-10T02:02:01.3040003-06:00",
+    "fechaCheckOut": null,
+    "cargos": [
+      {
+        "servicioId": 9,
+        "descripcion": "Tour Antigua Guatemala",
+        "cantidad": 3,
+        "precioUnitario": 250,
+        "fecha": "2026-10-10T02:02:01.3040003-06:00"
+      },
+      {
+        "servicioId": 8,
+        "descripcion": "Traslado al aeropuerto",
+        "cantidad": 3,
+        "precioUnitario": 180,
+        "fecha": "2026-10-10T02:02:01.3040003-06:00"
+      }
+    ],
+    "id": 32,
+    "fechaCreacion": "2026-10-05T09:40:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000033",
+    "huespedId": 8,
+    "habitacionId": 3,
+    "fechaEntrada": "2026-10-09T00:00:00-06:00",
+    "fechaSalida": "2026-10-14T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 520,
+    "estado": "EnCurso",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-10-09T14:41:00-06:00",
+    "fechaCheckOut": null,
+    "cargos": [
+      {
+        "servicioId": 4,
+        "descripcion": "Minibar",
+        "cantidad": 2,
+        "precioUnitario": 35,
+        "fecha": "2026-10-09T15:11:00-06:00"
+      },
+      {
+        "servicioId": 2,
+        "descripcion": "Almuerzo ejecutivo",
+        "cantidad": 2,
+        "precioUnitario": 95,
+        "fecha": "2026-10-09T15:41:00-06:00"
+      }
+    ],
+    "id": 33,
+    "fechaCreacion": "2026-10-05T09:41:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000034",
+    "huespedId": 13,
+    "habitacionId": 4,
+    "fechaEntrada": "2026-10-10T00:00:00-06:00",
+    "fechaSalida": "2026-10-11T00:00:00-06:00",
+    "cantidadPersonas": 2,
+    "tarifaPactada": 540,
+    "estado": "Confirmada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 34,
+    "fechaCreacion": "2026-10-05T09:50:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000035",
+    "huespedId": 3,
+    "habitacionId": 3,
+    "fechaEntrada": "2026-10-19T00:00:00-06:00",
+    "fechaSalida": "2026-10-21T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 520,
+    "estado": "Pendiente",
+    "motivoCancelacion": null,
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 35,
+    "fechaCreacion": "2026-10-05T10:00:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000036",
+    "huespedId": 10,
+    "habitacionId": 5,
+    "fechaEntrada": "2026-10-08T00:00:00-06:00",
+    "fechaSalida": "2026-10-10T00:00:00-06:00",
+    "cantidadPersonas": 3,
+    "tarifaPactada": 750,
+    "estado": "Finalizada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-10-08T14:24:00-06:00",
+    "fechaCheckOut": "2026-10-10T02:02:01.3040003-06:00",
+    "cargos": [
+      {
+        "servicioId": 2,
+        "descripcion": "Almuerzo ejecutivo",
+        "cantidad": 1,
+        "precioUnitario": 95,
+        "fecha": "2026-10-08T14:54:00-06:00"
+      }
+    ],
+    "id": 36,
+    "fechaCreacion": "2026-10-06T09:24:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000037",
+    "huespedId": 15,
+    "habitacionId": 6,
+    "fechaEntrada": "2026-10-09T00:00:00-06:00",
+    "fechaSalida": "2026-10-14T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 400,
+    "estado": "EnCurso",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-10-09T14:43:00-06:00",
+    "fechaCheckOut": null,
+    "cargos": [
+      {
+        "servicioId": 4,
+        "descripcion": "Minibar",
+        "cantidad": 2,
+        "precioUnitario": 35,
+        "fecha": "2026-10-09T15:13:00-06:00"
+      },
+      {
+        "servicioId": 4,
+        "descripcion": "Minibar",
+        "cantidad": 1,
+        "precioUnitario": 35,
+        "fecha": "2026-10-09T15:43:00-06:00"
+      }
+    ],
+    "id": 37,
+    "fechaCreacion": "2026-10-06T09:43:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000038",
+    "huespedId": 5,
+    "habitacionId": 10,
+    "fechaEntrada": "2026-10-09T00:00:00-06:00",
+    "fechaSalida": "2026-10-15T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 800,
+    "estado": "EnCurso",
+    "motivoCancelacion": null,
+    "fechaCheckIn": "2026-10-09T14:42:00-06:00",
+    "fechaCheckOut": null,
+    "cargos": [
+      {
+        "servicioId": 3,
+        "descripcion": "Cena a la carta",
+        "cantidad": 2,
+        "precioUnitario": 120,
+        "fecha": "2026-10-09T15:12:00-06:00"
+      }
+    ],
+    "id": 38,
+    "fechaCreacion": "2026-10-07T09:42:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000039",
+    "huespedId": 17,
+    "habitacionId": 16,
+    "fechaEntrada": "2026-10-14T00:00:00-06:00",
+    "fechaSalida": "2026-10-15T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 1200,
+    "estado": "Confirmada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 39,
+    "fechaCreacion": "2026-10-07T10:02:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000040",
+    "huespedId": 14,
+    "habitacionId": 20,
+    "fechaEntrada": "2026-10-15T00:00:00-06:00",
+    "fechaSalida": "2026-10-17T00:00:00-06:00",
+    "cantidadPersonas": 3,
+    "tarifaPactada": 1500,
+    "estado": "Cancelada",
+    "motivoCancelacion": "Viaje cancelado por el cliente.",
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 40,
+    "fechaCreacion": "2026-10-07T10:10:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000041",
+    "huespedId": 12,
+    "habitacionId": 13,
+    "fechaEntrada": "2026-10-23T00:00:00-06:00",
+    "fechaSalida": "2026-10-27T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 1050,
+    "estado": "Pendiente",
+    "motivoCancelacion": null,
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 41,
+    "fechaCreacion": "2026-10-08T10:01:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000042",
+    "huespedId": 13,
+    "habitacionId": 6,
+    "fechaEntrada": "2026-10-20T00:00:00-06:00",
+    "fechaSalida": "2026-10-23T00:00:00-06:00",
+    "cantidadPersonas": 1,
+    "tarifaPactada": 400,
+    "estado": "Confirmada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 42,
+    "fechaCreacion": "2026-10-08T10:04:00-06:00",
+    "activo": true
+  },
+  {
+    "codigo": "RES-000043",
+    "huespedId": 18,
+    "habitacionId": 20,
+    "fechaEntrada": "2026-10-16T00:00:00-06:00",
+    "fechaSalida": "2026-10-20T00:00:00-06:00",
+    "cantidadPersonas": 3,
+    "tarifaPactada": 1500,
+    "estado": "Confirmada",
+    "motivoCancelacion": null,
+    "fechaCheckIn": null,
+    "fechaCheckOut": null,
+    "cargos": [],
+    "id": 43,
+    "fechaCreacion": "2026-10-09T10:03:00-06:00",
+    "activo": true
+  }
+]

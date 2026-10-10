@@ -3,9 +3,6 @@ using Hotel.UI.Tema;
 
 namespace Hotel.UI.Controles;
 
-/// <summary>Variante visual de <see cref="BotonModerno"/>.</summary>
-public enum VarianteBoton { Primario, Secundario, Peligro, Fantasma }
-
 /// <summary>Botón con esquinas redondeadas, estados hover/presionado, cursor de mano e ícono opcional.</summary>
 /// <remarks>Sección 10.3</remarks>
 [ToolboxItem(true)]

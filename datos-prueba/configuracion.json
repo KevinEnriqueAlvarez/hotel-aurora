@@ -1,0 +1,10 @@
+{
+  "nombreHotel": "Hotel Aurora",
+  "nit": "1234567-8",
+  "direccion": "5a Avenida 10-25, Zona 1, Ciudad de Guatemala",
+  "telefono": "22345678",
+  "porcentajeIva": 12,
+  "porcentajeTurismo": 10,
+  "maxNochesPorReserva": 30,
+  "descuentoMaximo": 30
+}

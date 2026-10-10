@@ -45,15 +45,22 @@ Diagrama completo: `docs/uml/clases.puml`.
 | `EstadiaServicio` | Check-in, cargos y check-out con factura. |
 | `FacturacionServicio` | Pagos, anulación, historial y resumen del periodo. |
 | `ReporteServicio` | Indicadores y series para el tablero de inicio (E1). |
+| `ServiciosHotel` | Raíz de composición: crea todos los servicios con repositorios, reloj y configuración. |
+| `ServicioBase` | Convierte `ReglaNegocioException` en `Resultado` (patrón común de los servicios). |
 
 ## Interfaz (Hotel.UI)
 | Clase | Responsabilidad |
 |---|---|
-| `Paleta`, `Tipografia`, `Estilizador` | Tema visual y aplicación a tablas y campos. |
-| `PanelTarjeta`, `BotonModerno`, `InsigniaEstado`, `SelectorSegmentado` | Controles GDI+ base. |
+| `Paleta`, `Tipografia`, `GraficosUtil`, `Estilizador` | Tema visual, dibujo GDI+ y aplicación a tablas y campos. |
+| `ControlDibujado` | Base de los controles personalizados (doble búfer, fondo del contenedor). |
+| `PanelTarjeta`, `BotonModerno`, `BotonNavegacion`, `InsigniaEstado`, `SelectorSegmentado` | Controles GDI+ base. |
 | `GraficoBarras`, `GraficoDona`, `TarjetaKpi`, `BarraProgreso` | Controles del tablero (E1). |
 | `FormularioBase`, `VistaListadoBase` | Herencia visual para diálogos y vistas de listado. |
 | `DialogoMensaje`, `Mensajes` | Mensajes temáticos. |
 | `FormLogin`, `FormPrincipal` | Acceso y navegación. |
-| `Vista*` | Un UserControl por módulo. |
-| `Form*` | Diálogos de registro, edición y detalle. |
+| `VistaBase` → `VistaListadoBase` → `VistaHabitaciones`, `VistaHuespedes`, `VistaReservas`, `VistaFacturacion`, `VistaUsuarios` | Vistas de listado (herencia). |
+| `VistaInicio`, `VistaRecepcion` | Vistas con diseño propio. |
+| `FormHabitacion`, `FormHuesped`, `FormHuespedDetalle`, `FormUsuario`, `FormReserva`, `FormCheckIn`, `FormCargo`, `FormCheckOut`, `FormPago`, `FormFacturaDetalle`, `FormEntradaTexto` | Diálogos que heredan de `FormularioBase`. |
+| `ImpresorFactura` | `PrintDocument` para la vista previa e impresión (RF-26). |
+
+Diagrama de la interfaz: `docs/uml/clases-ui.puml`.

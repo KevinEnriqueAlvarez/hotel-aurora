@@ -1,0 +1,82 @@
+[
+  {
+    "nombre": "Desayuno buffet",
+    "categoria": "Restaurante",
+    "precio": 65,
+    "id": 1,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Almuerzo ejecutivo",
+    "categoria": "Restaurante",
+    "precio": 95,
+    "id": 2,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Cena a la carta",
+    "categoria": "Restaurante",
+    "precio": 120,
+    "id": 3,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Minibar",
+    "categoria": "Minibar",
+    "precio": 35,
+    "id": 4,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Lavandería por docena",
+    "categoria": "Lavanderia",
+    "precio": 80,
+    "id": 5,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Planchado de prenda",
+    "categoria": "Lavanderia",
+    "precio": 20,
+    "id": 6,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Masaje relajante",
+    "categoria": "Spa",
+    "precio": 350,
+    "id": 7,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Traslado al aeropuerto",
+    "categoria": "Transporte",
+    "precio": 180,
+    "id": 8,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Tour Antigua Guatemala",
+    "categoria": "Transporte",
+    "precio": 250,
+    "id": 9,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombre": "Cóctel de bienvenida",
+    "categoria": "Otro",
+    "precio": 45,
+    "id": 10,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  }
+]

@@ -22,21 +22,21 @@ Problema → Requisitos → UML → Clases → Código C# → Interfaz → Archi
 | RF-16 | CU-05 | Reserva | ReservaServicio.Confirmar | VistaReservas | reservas.json | ReservaTests, ReservaServicioTests |
 | RF-17 | CU-05 | Reserva | ReservaServicio.Cancelar | VistaReservas, FormEntradaTexto | reservas.json | ReservaTests, ReservaServicioTests |
 | RF-18 | CU-11 | Reserva | ReservaServicio.Buscar | VistaReservas | reservas.json | ReservaServicioTests |
-| RF-19 | CU-06 | Reserva, Habitacion | EstadiaServicio.CheckIn | VistaRecepcion | reservas.json, habitaciones.json | EstadiaServicioTests |
+| RF-19 | CU-06 | Reserva, Habitacion | EstadiaServicio.CheckIn | VistaRecepcion, FormCheckIn | reservas.json, habitaciones.json | EstadiaServicioTests · CP-29 |
 | RF-20 | CU-07 | Reserva, CargoAdicional, ServicioAdicional | EstadiaServicio.AgregarCargo | VistaRecepcion, FormCargo | reservas.json, servicios.json | EstadiaServicioTests |
 | RF-21 | CU-08 | Reserva, Factura, Habitacion | EstadiaServicio.CheckOut | VistaRecepcion, FormCheckOut | reservas.json, facturas.json, habitaciones.json | EstadiaServicioTests |
 | RF-22 | CU-08 | Factura, LineaFactura, ConfiguracionHotel | Factura.Generar (vía EstadiaServicio.CheckOut) | FormCheckOut, FormFacturaDetalle | facturas.json | FacturaTests, EstadiaServicioTests |
 | RF-23 | CU-09 | Pago, PagoEfectivo, PagoTarjeta, PagoTransferencia | FacturacionServicio.RegistrarPago | FormPago | facturas.json | FacturaTests, PagoTests, FacturacionServicioTests |
 | RF-24 | CU-10 | Factura | FacturacionServicio.Anular | VistaFacturacion, FormEntradaTexto | facturas.json | FacturaTests, FacturacionServicioTests |
 | RF-25 | CU-11 | Factura | FacturacionServicio.Buscar / ResumenPeriodo | VistaFacturacion | facturas.json | FacturacionServicioTests |
-| RF-26 | CU-11 | Factura | — (ImpresorFactura sobre PrintDocument) | FormFacturaDetalle | facturas.json | Prueba manual CP-30 |
+| RF-26 | CU-11 | Factura | — (ImpresorFactura sobre PrintDocument en la UI) | FormFacturaDetalle | facturas.json | Prueba manual CP-38 |
 
 ## Reglas de negocio
 
 | RN | Clase / método que la implementa | Prueba(s) |
 |---|---|---|
 | RN-01 | HabitacionServicio, HuespedServicio, UsuarioServicio (unicidad) | HabitacionServicioTests, HuespedServicioTests, UsuarioServicioTests |
-| RN-02 | ReservaServicio.ValidarReglas, Reserva.CambiarFechas | ReservaServicioTests |
+| RN-02 | ReservaServicio.ValidarFechasYCapacidad, Reserva.CambiarFechas | ReservaServicioTests |
 | RN-03 | Reserva.SeSolapaCon, ReservaServicio | ReservaTests, ReservaServicioTests |
 | RN-04 | ReservaServicio.BuscarDisponibles / Crear | ReservaServicioTests |
 | RN-05 | Reserva.Confirmar / Cancelar / RegistrarCheckIn / RegistrarCheckOut | ReservaTests |
@@ -58,9 +58,17 @@ Problema → Requisitos → UML → Clases → Código C# → Interfaz → Archi
 | RNF-01 | JsonConfig | RepositorioJsonTests |
 | RNF-02 | RepositorioJson (persistencia inmediata) | RepositorioJsonTests |
 | RNF-03 | RepositorioJson (escritura atómica y respaldo) | RepositorioJsonTests |
-| RNF-04 | RepositorioJson en memoria | DatosSemillaTests |
-| RNF-05 | Tema/Paleta, FormPrincipal | Manual |
+| RNF-04 | RepositorioJson en memoria | DatosSemillaTests (consultas < 1 s) |
+| RNF-05 | Tema/Paleta, FormPrincipal (mínimo 1280×720) | Manual CP-40 |
 | RNF-06 | Usuario.EstablecerContrasena | UsuarioTests |
 | RNF-07 | Estructura UI → Core | Revisión de código |
 | RNF-08 | Comentarios XML | Revisión de código |
-| RNF-09 | Program.cs (manejador global), RegistroErrores | Manual |
+| RNF-09 | Program.cs (manejador global), RegistroErrores | Manual CP-39 |
+
+## Extras aprobados
+
+| Extra | Implementación | Prueba(s) |
+|---|---|---|
+| E1 · Dashboard «Inicio» | `VistaInicio`, `GraficoBarras`, `GraficoDona`, `TarjetaKpi`, `BarraProgreso`, `SelectorSegmentado`, `ReporteServicio` | DatosSemillaTests (Indicadores, SerieMensual) · CP-41 |
+| E5 · Integración continua | `.github/workflows/ci.yml` | Ejecución en GitHub Actions |
+| E6 · Diagramas de estados | `docs/uml/estados-reserva.puml`, `docs/uml/estados-habitacion.puml` | Revisión (coinciden con `Reserva` y `Habitacion`) |

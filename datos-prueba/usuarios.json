@@ -1,0 +1,32 @@
+[
+  {
+    "nombreUsuario": "admin",
+    "rol": "Administrador",
+    "hashContrasena": "ejh/BWx8IVbqc7RUiwrU5mjpvJCczHRv+sw9kIUwArY=",
+    "sal": "7GPwYGiV3BQ+mCujR2Ox6g==",
+    "nombres": "Administrador",
+    "apellidos": "Aurora",
+    "tipoDocumento": "Dpi",
+    "numeroDocumento": "1000000000001",
+    "telefono": "22345678",
+    "correo": "admin@hotelaurora.gt",
+    "id": 1,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  },
+  {
+    "nombreUsuario": "recepcion",
+    "rol": "Recepcionista",
+    "hashContrasena": "wJnWCuSmBCX1xUnVnw46e78eb0NMx9GbedNQpiARhGs=",
+    "sal": "cFyeRnLpgP5F6eaYpUWl3w==",
+    "nombres": "Recepcionista",
+    "apellidos": "Principal",
+    "tipoDocumento": "Dpi",
+    "numeroDocumento": "1000000000002",
+    "telefono": "22345678",
+    "correo": "recepcion@hotelaurora.gt",
+    "id": 2,
+    "fechaCreacion": "2026-02-10T00:00:00-06:00",
+    "activo": true
+  }
+]

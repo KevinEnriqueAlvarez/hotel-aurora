@@ -1,0 +1,1150 @@
+[
+  {
+    "numero": "FAC-000001",
+    "reservaId": 1,
+    "huespedId": 19,
+    "nitCliente": "CF",
+    "nombreCliente": "Hiroshi Tanaka",
+    "fechaEmision": "2026-02-16T11:00:00-06:00",
+    "porcentajeDescuento": 10,
+    "subtotal": 3070,
+    "descuento": 307.0,
+    "iva": 331.56,
+    "impuestoTurismo": 216.0,
+    "total": 3310.56,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 205 (Familiar)",
+        "cantidad": 3,
+        "precioUnitario": 800
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180
+      },
+      {
+        "concepto": "Tour Antigua Guatemala",
+        "cantidad": 1,
+        "precioUnitario": 250
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 3350,
+        "monto": 3310.56,
+        "fecha": "2026-02-16T11:15:00-06:00"
+      }
+    ],
+    "id": 1,
+    "fechaCreacion": "2026-02-16T11:00:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000002",
+    "reservaId": 3,
+    "huespedId": 4,
+    "nitCliente": "57833397",
+    "nombreCliente": "Ana Pérez Méndez",
+    "fechaEmision": "2026-02-26T11:01:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1935,
+    "descuento": 0,
+    "iva": 232.2,
+    "impuestoTurismo": 140,
+    "total": 2307.2,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 101 (Sencilla)",
+        "cantidad": 4,
+        "precioUnitario": 350
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 2,
+        "precioUnitario": 80
+      },
+      {
+        "concepto": "Desayuno buffet",
+        "cantidad": 3,
+        "precioUnitario": 65
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4037",
+        "numeroAutorizacion": "AUT100911",
+        "monto": 2307.2,
+        "fecha": "2026-02-26T11:16:00-06:00"
+      }
+    ],
+    "id": 2,
+    "fechaCreacion": "2026-02-26T11:01:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000003",
+    "reservaId": 4,
+    "huespedId": 1,
+    "nitCliente": "42100461",
+    "nombreCliente": "Carlos López Morales",
+    "fechaEmision": "2026-03-07T11:02:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1690,
+    "descuento": 0,
+    "iva": 202.8,
+    "impuestoTurismo": 136,
+    "total": 2028.8,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 302 (Doble)",
+        "cantidad": 2,
+        "precioUnitario": 680
+      },
+      {
+        "concepto": "Cóctel de bienvenida",
+        "cantidad": 3,
+        "precioUnitario": 45
+      },
+      {
+        "concepto": "Desayuno buffet",
+        "cantidad": 2,
+        "precioUnitario": 65
+      },
+      {
+        "concepto": "Desayuno buffet",
+        "cantidad": 1,
+        "precioUnitario": 65
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banrural",
+        "numeroReferencia": "REF500626",
+        "monto": 2028.8,
+        "fecha": "2026-03-07T11:17:00-06:00"
+      }
+    ],
+    "id": 3,
+    "fechaCreacion": "2026-03-07T11:02:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000004",
+    "reservaId": 6,
+    "huespedId": 17,
+    "nitCliente": "CF",
+    "nombreCliente": "Laura Fernández",
+    "fechaEmision": "2026-03-20T11:03:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 8050,
+    "descuento": 0,
+    "iva": 966,
+    "impuestoTurismo": 700,
+    "total": 9716,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 404 (Suite)",
+        "cantidad": 5,
+        "precioUnitario": 1400
+      },
+      {
+        "concepto": "Masaje relajante",
+        "cantidad": 3,
+        "precioUnitario": 350
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 9750,
+        "monto": 9716,
+        "fecha": "2026-03-20T11:18:00-06:00"
+      }
+    ],
+    "id": 4,
+    "fechaCreacion": "2026-03-20T11:03:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000005",
+    "reservaId": 7,
+    "huespedId": 3,
+    "nitCliente": "CF",
+    "nombreCliente": "José Hernández Castillo",
+    "fechaEmision": "2026-03-25T11:04:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1460,
+    "descuento": 0,
+    "iva": 175.2,
+    "impuestoTurismo": 110,
+    "total": 1745.2,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 305 (Suite)",
+        "cantidad": 1,
+        "precioUnitario": 1100
+      },
+      {
+        "concepto": "Cena a la carta",
+        "cantidad": 1,
+        "precioUnitario": 120
+      },
+      {
+        "concepto": "Cena a la carta",
+        "cantidad": 2,
+        "precioUnitario": 120
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4148",
+        "numeroAutorizacion": "AUT103644",
+        "monto": 1745.2,
+        "fecha": "2026-03-25T11:19:00-06:00"
+      }
+    ],
+    "id": 5,
+    "fechaCreacion": "2026-03-25T11:04:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000006",
+    "reservaId": 8,
+    "huespedId": 18,
+    "nitCliente": "CF",
+    "nombreCliente": "Pierre Dubois",
+    "fechaEmision": "2026-04-03T11:05:00-06:00",
+    "porcentajeDescuento": 10,
+    "subtotal": 1165,
+    "descuento": 116.5,
+    "iva": 125.82,
+    "impuestoTurismo": 31.5,
+    "total": 1205.82,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 101 (Sencilla)",
+        "cantidad": 1,
+        "precioUnitario": 350
+      },
+      {
+        "concepto": "Cena a la carta",
+        "cantidad": 3,
+        "precioUnitario": 120
+      },
+      {
+        "concepto": "Almuerzo ejecutivo",
+        "cantidad": 1,
+        "precioUnitario": 95
+      },
+      {
+        "concepto": "Cena a la carta",
+        "cantidad": 3,
+        "precioUnitario": 120
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banco Industrial",
+        "numeroReferencia": "REF501565",
+        "monto": 1205.82,
+        "fecha": "2026-04-03T11:20:00-06:00"
+      }
+    ],
+    "id": 6,
+    "fechaCreacion": "2026-04-03T11:05:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000007",
+    "reservaId": 9,
+    "huespedId": 17,
+    "nitCliente": "CF",
+    "nombreCliente": "Laura Fernández",
+    "fechaEmision": "2026-04-16T11:06:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 2360,
+    "descuento": 0,
+    "iva": 283.2,
+    "impuestoTurismo": 162,
+    "total": 2805.2,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 104 (Doble)",
+        "cantidad": 3,
+        "precioUnitario": 540
+      },
+      {
+        "concepto": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250
+      },
+      {
+        "concepto": "Cena a la carta",
+        "cantidad": 1,
+        "precioUnitario": 120
+      },
+      {
+        "concepto": "Cena a la carta",
+        "cantidad": 1,
+        "precioUnitario": 120
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 2850,
+        "monto": 2805.2,
+        "fecha": "2026-04-16T11:21:00-06:00"
+      }
+    ],
+    "id": 7,
+    "fechaCreacion": "2026-04-16T11:06:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000008",
+    "reservaId": 11,
+    "huespedId": 14,
+    "nitCliente": "CF",
+    "nombreCliente": "Gabriela Estrada Pérez",
+    "fechaEmision": "2026-04-25T11:07:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1670,
+    "descuento": 0,
+    "iva": 200.4,
+    "impuestoTurismo": 130,
+    "total": 2000.4,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 402 (Suite)",
+        "cantidad": 1,
+        "precioUnitario": 1300
+      },
+      {
+        "concepto": "Desayuno buffet",
+        "cantidad": 2,
+        "precioUnitario": 65
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4259",
+        "numeroAutorizacion": "AUT106377",
+        "monto": 2000.4,
+        "fecha": "2026-04-25T11:22:00-06:00"
+      }
+    ],
+    "id": 8,
+    "fechaCreacion": "2026-04-25T11:07:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000009",
+    "reservaId": 12,
+    "huespedId": 14,
+    "nitCliente": "CF",
+    "nombreCliente": "Gabriela Estrada Pérez",
+    "fechaEmision": "2026-05-07T11:08:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 2350,
+    "descuento": 0,
+    "iva": 282,
+    "impuestoTurismo": 186,
+    "total": 2818,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 203 (Doble)",
+        "cantidad": 3,
+        "precioUnitario": 620
+      },
+      {
+        "concepto": "Cena a la carta",
+        "cantidad": 2,
+        "precioUnitario": 120
+      },
+      {
+        "concepto": "Tour Antigua Guatemala",
+        "cantidad": 1,
+        "precioUnitario": 250
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banrural",
+        "numeroReferencia": "REF502504",
+        "monto": 2818,
+        "fecha": "2026-05-07T11:23:00-06:00"
+      }
+    ],
+    "id": 9,
+    "fechaCreacion": "2026-05-07T11:08:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000010",
+    "reservaId": 13,
+    "huespedId": 13,
+    "nitCliente": "87564947",
+    "nombreCliente": "Diego Alvarado Hernández",
+    "fechaEmision": "2026-05-16T11:09:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1335,
+    "descuento": 0,
+    "iva": 160.2,
+    "impuestoTurismo": 130,
+    "total": 1625.2,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 301 (Doble)",
+        "cantidad": 2,
+        "precioUnitario": 650
+      },
+      {
+        "concepto": "Minibar",
+        "cantidad": 1,
+        "precioUnitario": 35
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 1650,
+        "monto": 1625.2,
+        "fecha": "2026-05-16T11:24:00-06:00"
+      }
+    ],
+    "id": 10,
+    "fechaCreacion": "2026-05-16T11:09:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000011",
+    "reservaId": 14,
+    "huespedId": 15,
+    "nitCliente": "CF",
+    "nombreCliente": "Fernando Velásquez Martínez",
+    "fechaEmision": "2026-05-27T11:10:00-06:00",
+    "porcentajeDescuento": 10,
+    "subtotal": 3650,
+    "descuento": 365.0,
+    "iva": 394.2,
+    "impuestoTurismo": 306.0,
+    "total": 3985.2,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 302 (Doble)",
+        "cantidad": 5,
+        "precioUnitario": 680
+      },
+      {
+        "concepto": "Cóctel de bienvenida",
+        "cantidad": 2,
+        "precioUnitario": 45
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 2,
+        "precioUnitario": 80
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4370",
+        "numeroAutorizacion": "AUT109110",
+        "monto": 3985.2,
+        "fecha": "2026-05-27T11:25:00-06:00"
+      }
+    ],
+    "id": 11,
+    "fechaCreacion": "2026-05-27T11:10:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000012",
+    "reservaId": 15,
+    "huespedId": 3,
+    "nitCliente": "CF",
+    "nombreCliente": "José Hernández Castillo",
+    "fechaEmision": "2026-06-04T11:11:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 800,
+    "descuento": 0,
+    "iva": 96,
+    "impuestoTurismo": 76,
+    "total": 972,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 102 (Sencilla)",
+        "cantidad": 2,
+        "precioUnitario": 380
+      },
+      {
+        "concepto": "Planchado de prenda",
+        "cantidad": 2,
+        "precioUnitario": 20
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banco Industrial",
+        "numeroReferencia": "REF503443",
+        "monto": 972,
+        "fecha": "2026-06-04T11:26:00-06:00"
+      }
+    ],
+    "id": 12,
+    "fechaCreacion": "2026-06-04T11:11:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000013",
+    "reservaId": 16,
+    "huespedId": 12,
+    "nitCliente": "CF",
+    "nombreCliente": "Andrea Orellana García",
+    "fechaEmision": "2026-06-17T11:12:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 2680,
+    "descuento": 0,
+    "iva": 321.6,
+    "impuestoTurismo": 260,
+    "total": 3261.6,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 103 (Doble)",
+        "cantidad": 5,
+        "precioUnitario": 520
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 1,
+        "precioUnitario": 80
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 3300,
+        "monto": 3261.6,
+        "fecha": "2026-06-17T11:27:00-06:00"
+      }
+    ],
+    "id": 13,
+    "fechaCreacion": "2026-06-17T11:12:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000014",
+    "reservaId": 17,
+    "huespedId": 7,
+    "nitCliente": "45197687",
+    "nombreCliente": "Jorge Ramírez Orellana",
+    "fechaEmision": "2026-06-23T11:13:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 2935,
+    "descuento": 0,
+    "iva": 352.2,
+    "impuestoTurismo": 240,
+    "total": 3527.2,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 401 (Suite)",
+        "cantidad": 2,
+        "precioUnitario": 1200
+      },
+      {
+        "concepto": "Almuerzo ejecutivo",
+        "cantidad": 3,
+        "precioUnitario": 95
+      },
+      {
+        "concepto": "Tour Antigua Guatemala",
+        "cantidad": 1,
+        "precioUnitario": 250
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4481",
+        "numeroAutorizacion": "AUT111843",
+        "monto": 3527.2,
+        "fecha": "2026-06-23T11:28:00-06:00"
+      }
+    ],
+    "id": 14,
+    "fechaCreacion": "2026-06-23T11:13:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000015",
+    "reservaId": 18,
+    "huespedId": 14,
+    "nitCliente": "CF",
+    "nombreCliente": "Gabriela Estrada Pérez",
+    "fechaEmision": "2026-07-03T11:14:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1445,
+    "descuento": 0,
+    "iva": 173.4,
+    "impuestoTurismo": 62,
+    "total": 1680.4,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 203 (Doble)",
+        "cantidad": 1,
+        "precioUnitario": 620
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 3,
+        "precioUnitario": 180
+      },
+      {
+        "concepto": "Almuerzo ejecutivo",
+        "cantidad": 3,
+        "precioUnitario": 95
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banrural",
+        "numeroReferencia": "REF504382",
+        "monto": 1680.4,
+        "fecha": "2026-07-03T11:29:00-06:00"
+      }
+    ],
+    "id": 15,
+    "fechaCreacion": "2026-07-03T11:14:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000016",
+    "reservaId": 19,
+    "huespedId": 1,
+    "nitCliente": "42100461",
+    "nombreCliente": "Carlos López Morales",
+    "fechaEmision": "2026-07-14T11:15:00-06:00",
+    "porcentajeDescuento": 10,
+    "subtotal": 2685,
+    "descuento": 268.5,
+    "iva": 289.98,
+    "impuestoTurismo": 216.0,
+    "total": 2922.48,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 205 (Familiar)",
+        "cantidad": 3,
+        "precioUnitario": 800
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80
+      },
+      {
+        "concepto": "Cóctel de bienvenida",
+        "cantidad": 1,
+        "precioUnitario": 45
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 2950,
+        "monto": 2922.48,
+        "fecha": "2026-07-14T11:30:00-06:00"
+      }
+    ],
+    "id": 16,
+    "fechaCreacion": "2026-07-14T11:15:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000017",
+    "reservaId": 21,
+    "huespedId": 9,
+    "nitCliente": "CF",
+    "nombreCliente": "Pedro Méndez Estrada",
+    "fechaEmision": "2026-07-25T11:16:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 3340,
+    "descuento": 0,
+    "iva": 400.8,
+    "impuestoTurismo": 280,
+    "total": 4020.8,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 404 (Suite)",
+        "cantidad": 2,
+        "precioUnitario": 1400
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 3,
+        "precioUnitario": 180
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4592",
+        "numeroAutorizacion": "AUT114576",
+        "monto": 4020.8,
+        "fecha": "2026-07-25T11:31:00-06:00"
+      }
+    ],
+    "id": 17,
+    "fechaCreacion": "2026-07-25T11:16:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000018",
+    "reservaId": 23,
+    "huespedId": 2,
+    "nitCliente": "CF",
+    "nombreCliente": "María García Ramírez",
+    "fechaEmision": "2026-08-05T11:17:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 4335,
+    "descuento": 0,
+    "iva": 520.2,
+    "impuestoTurismo": 420,
+    "total": 5275.2,
+    "estado": "Emitida",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 303 (Suite)",
+        "cantidad": 4,
+        "precioUnitario": 1050
+      },
+      {
+        "concepto": "Cóctel de bienvenida",
+        "cantidad": 3,
+        "precioUnitario": 45
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banco Industrial",
+        "numeroReferencia": "REF505321",
+        "monto": 2110.08,
+        "fecha": "2026-08-05T11:32:00-06:00"
+      }
+    ],
+    "id": 18,
+    "fechaCreacion": "2026-08-05T11:17:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000019",
+    "reservaId": 24,
+    "huespedId": 1,
+    "nitCliente": "42100461",
+    "nombreCliente": "Carlos López Morales",
+    "fechaEmision": "2026-08-12T11:18:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 2385,
+    "descuento": 0,
+    "iva": 286.2,
+    "impuestoTurismo": 105,
+    "total": 2776.2,
+    "estado": "Emitida",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 303 (Suite)",
+        "cantidad": 1,
+        "precioUnitario": 1050
+      },
+      {
+        "concepto": "Masaje relajante",
+        "cantidad": 3,
+        "precioUnitario": 350
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 3,
+        "precioUnitario": 80
+      },
+      {
+        "concepto": "Cóctel de bienvenida",
+        "cantidad": 1,
+        "precioUnitario": 45
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 1150,
+        "monto": 1110.48,
+        "fecha": "2026-08-12T11:33:00-06:00"
+      }
+    ],
+    "id": 19,
+    "fechaCreacion": "2026-08-12T11:18:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000020",
+    "reservaId": 25,
+    "huespedId": 8,
+    "nitCliente": "CF",
+    "nombreCliente": "Lucía Castillo Alvarado",
+    "fechaEmision": "2026-08-25T11:19:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 7710,
+    "descuento": 0,
+    "iva": 925.2,
+    "impuestoTurismo": 700,
+    "total": 9335.2,
+    "estado": "Emitida",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 404 (Suite)",
+        "cantidad": 5,
+        "precioUnitario": 1400
+      },
+      {
+        "concepto": "Desayuno buffet",
+        "cantidad": 2,
+        "precioUnitario": 65
+      },
+      {
+        "concepto": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250
+      },
+      {
+        "concepto": "Lavandería por docena",
+        "cantidad": 1,
+        "precioUnitario": 80
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4703",
+        "numeroAutorizacion": "AUT117309",
+        "monto": 3734.08,
+        "fecha": "2026-08-25T11:34:00-06:00"
+      }
+    ],
+    "id": 20,
+    "fechaCreacion": "2026-08-25T11:19:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000021",
+    "reservaId": 26,
+    "huespedId": 14,
+    "nitCliente": "CF",
+    "nombreCliente": "Gabriela Estrada Pérez",
+    "fechaEmision": "2026-09-04T11:20:00-06:00",
+    "porcentajeDescuento": 10,
+    "subtotal": 6930,
+    "descuento": 693.0,
+    "iva": 748.44,
+    "impuestoTurismo": 562.5,
+    "total": 7547.94,
+    "estado": "Emitida",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 403 (Suite)",
+        "cantidad": 5,
+        "precioUnitario": 1250
+      },
+      {
+        "concepto": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banrural",
+        "numeroReferencia": "REF506260",
+        "monto": 3019.18,
+        "fecha": "2026-09-04T11:35:00-06:00"
+      }
+    ],
+    "id": 21,
+    "fechaCreacion": "2026-09-04T11:20:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000022",
+    "reservaId": 27,
+    "huespedId": 2,
+    "nitCliente": "CF",
+    "nombreCliente": "María García Ramírez",
+    "fechaEmision": "2026-09-10T11:21:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1120,
+    "descuento": 0,
+    "iva": 134.4,
+    "impuestoTurismo": 58,
+    "total": 1312.4,
+    "estado": "Emitida",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 202 (Doble)",
+        "cantidad": 1,
+        "precioUnitario": 580
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 3,
+        "precioUnitario": 180
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 550,
+        "monto": 524.96,
+        "fecha": "2026-09-10T11:36:00-06:00"
+      }
+    ],
+    "id": 22,
+    "fechaCreacion": "2026-09-10T11:21:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000023",
+    "reservaId": 28,
+    "huespedId": 15,
+    "nitCliente": "CF",
+    "nombreCliente": "Fernando Velásquez Martínez",
+    "fechaEmision": "2026-09-21T11:22:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 2260,
+    "descuento": 0,
+    "iva": 271.2,
+    "impuestoTurismo": 160,
+    "total": 2691.2,
+    "estado": "Emitida",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 205 (Familiar)",
+        "cantidad": 2,
+        "precioUnitario": 800
+      },
+      {
+        "concepto": "Cóctel de bienvenida",
+        "cantidad": 2,
+        "precioUnitario": 45
+      },
+      {
+        "concepto": "Minibar",
+        "cantidad": 2,
+        "precioUnitario": 35
+      },
+      {
+        "concepto": "Tour Antigua Guatemala",
+        "cantidad": 2,
+        "precioUnitario": 250
+      }
+    ],
+    "pagos": [],
+    "id": 23,
+    "fechaCreacion": "2026-09-21T11:22:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000024",
+    "reservaId": 29,
+    "huespedId": 12,
+    "nitCliente": "CF",
+    "nombreCliente": "Andrea Orellana García",
+    "fechaEmision": "2026-10-02T11:23:00-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1930,
+    "descuento": 0,
+    "iva": 231.6,
+    "impuestoTurismo": 174,
+    "total": 2335.6,
+    "estado": "Anulada",
+    "motivoAnulacion": "Datos de facturación incorrectos",
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 202 (Doble)",
+        "cantidad": 3,
+        "precioUnitario": 580
+      },
+      {
+        "concepto": "Almuerzo ejecutivo",
+        "cantidad": 2,
+        "precioUnitario": 95
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "transferencia",
+        "banco": "Banco Industrial",
+        "numeroReferencia": "REF507199",
+        "monto": 2335.6,
+        "fecha": "2026-10-02T11:38:00-06:00"
+      }
+    ],
+    "id": 24,
+    "fechaCreacion": "2026-10-02T11:23:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000025",
+    "reservaId": 30,
+    "huespedId": 19,
+    "nitCliente": "CF",
+    "nombreCliente": "Hiroshi Tanaka",
+    "fechaEmision": "2026-10-09T11:25:00-06:00",
+    "porcentajeDescuento": 5,
+    "subtotal": 2580,
+    "descuento": 129.00,
+    "iva": 294.12,
+    "impuestoTurismo": 193.80,
+    "total": 2938.92,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 302 (Doble)",
+        "cantidad": 3,
+        "precioUnitario": 680
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 1,
+        "precioUnitario": 180
+      },
+      {
+        "concepto": "Traslado al aeropuerto",
+        "cantidad": 2,
+        "precioUnitario": 180
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "tarjeta",
+        "ultimosCuatroDigitos": "4925",
+        "numeroAutorizacion": "AUT122775",
+        "monto": 2938.92,
+        "fecha": "2026-10-09T11:40:00-06:00"
+      }
+    ],
+    "id": 25,
+    "fechaCreacion": "2026-10-09T11:25:00-06:00",
+    "activo": true
+  },
+  {
+    "numero": "FAC-000026",
+    "reservaId": 36,
+    "huespedId": 10,
+    "nitCliente": "88081516",
+    "nombreCliente": "Carmen Cifuentes Velásquez",
+    "fechaEmision": "2026-10-10T02:02:01.3040003-06:00",
+    "porcentajeDescuento": 0,
+    "subtotal": 1595,
+    "descuento": 0,
+    "iva": 191.4,
+    "impuestoTurismo": 150,
+    "total": 1936.4,
+    "estado": "Pagada",
+    "motivoAnulacion": null,
+    "lineas": [
+      {
+        "concepto": "Alojamiento hab. 105 (Familiar)",
+        "cantidad": 2,
+        "precioUnitario": 750
+      },
+      {
+        "concepto": "Almuerzo ejecutivo",
+        "cantidad": 1,
+        "precioUnitario": 95
+      }
+    ],
+    "pagos": [
+      {
+        "tipo": "efectivo",
+        "montoRecibido": 1950,
+        "monto": 1936.4,
+        "fecha": "2026-10-10T02:02:01.3040003-06:00"
+      }
+    ],
+    "id": 26,
+    "fechaCreacion": "2026-10-10T02:02:01.3040003-06:00",
+    "activo": true
+  }
+]

@@ -30,15 +30,33 @@ package "Comun" {
     +Exito : bool
     +Mensaje : string
     +Errores : IReadOnlyList<string>
-    {static} +Ok() : Resultado
+    {static} +Ok(mensaje : string) : Resultado
     {static} +Fallo(mensaje : string) : Resultado
+    {static} +Fallo(errores : IEnumerable<string>) : Resultado
   }
   class "Resultado<T>" as ResultadoT {
     +Valor : T?
+    {static} +Ok(valor : T, mensaje : string) : Resultado<T>
   }
-  class ReglaNegocioException
-  class Validador <<static>>
-  class Constantes <<static>>
+  class ReglaNegocioException {
+    +Errores : IReadOnlyList<string>
+  }
+  class Validador <<static>> {
+    +EsDpiValido(valor) : bool
+    +EsPasaporteValido(valor) : bool
+    +EsDocumentoValido(tipo, valor) : bool
+    +EsNitValido(valor) : bool
+    +CalcularVerificadorNit(digitos) : char
+    +EsCorreoValido(valor) : bool
+    +EsTelefonoValido(valor) : bool
+    +EsNombreValido(valor) : bool
+    +EsContrasenaValida(valor) : bool
+  }
+  class Constantes <<static>> {
+    +FormatearCorrelativo(prefijo, numero) : string
+    +FormatearMoneda(monto) : string
+    +Redondear(monto) : decimal
+  }
 }
 
 package "Dominio" {
@@ -95,11 +113,11 @@ package "Dominio" {
   class Reserva {
     +Codigo : string
     +HuespedId : int
-    +HabitacionId : int
-    +FechaEntrada : DateTime
-    +FechaSalida : DateTime
-    +CantidadPersonas : int
-    +TarifaPactada : decimal
+    +HabitacionId : int {private set}
+    +FechaEntrada : DateTime {private set}
+    +FechaSalida : DateTime {private set}
+    +CantidadPersonas : int {private set}
+    +TarifaPactada : decimal {private set}
     +Estado : EstadoReserva {private set}
     +MotivoCancelacion : string? {private set}
     +FechaCheckIn : DateTime? {private set}
@@ -108,6 +126,8 @@ package "Dominio" {
     +Noches : int
     +TotalAlojamiento : decimal
     +TotalCargos : decimal
+    +EstaActiva : bool
+    {static} +Crear(huespedId, habitacionId, entrada, salida, personas, tarifa) : Reserva
     +Confirmar()
     +Cancelar(motivo : string)
     +RegistrarCheckIn(fecha : DateTime)
@@ -192,9 +212,16 @@ package "Dominio" {
 }
 
 package "Datos" {
-  class JsonConfig <<static>>
+  class JsonConfig <<static>> {
+    +Opciones : JsonSerializerOptions
+  }
+  class ArchivoJson <<static>> {
+    +Leer<T>(ruta, alAvisar) : T?
+    +Escribir<T>(ruta, contenido)
+  }
   class "RepositorioJson<T>" as RepositorioJson
   class ContextoDatos {
+    +Carpeta : string
     +Usuarios : IRepositorio<Usuario>
     +Habitaciones : IRepositorio<Habitacion>
     +Huespedes : IRepositorio<Huesped>
@@ -203,19 +230,37 @@ package "Datos" {
     +Facturas : IRepositorio<Factura>
     +Configuracion : ConfiguracionHotel
     +Avisos : IReadOnlyList<string>
+    +GuardarConfiguracion()
   }
   class DatosSemilla <<static>> {
-    {static} +SembrarSiVacio(contexto : ContextoDatos, hoy : DateTime) : bool
+    {static} +SembrarSiVacio(contexto : ContextoDatos, ahora : DateTime) : bool
   }
 }
 
 package "Servicios" {
+  abstract class ServicioBase {
+    #Ejecutar(accion, mensajeOk) : Resultado
+    #Ejecutar<T>(funcion, mensajeOk) : Resultado<T>
+  }
+  class ServiciosHotel {
+    +Autenticacion : AutenticacionServicio
+    +Usuarios : UsuarioServicio
+    +Habitaciones : HabitacionServicio
+    +Huespedes : HuespedServicio
+    +Reservas : ReservaServicio
+    +Estadias : EstadiaServicio
+    +Facturacion : FacturacionServicio
+    +Reportes : ReporteServicio
+  }
   class AutenticacionServicio {
     +UsuarioActual : Usuario?
+    +EsAdministrador : bool
     +IniciarSesion(usuario, contrasena) : Resultado<Usuario>
     +CerrarSesion()
+    +ExigirAdministrador(accion)
   }
   class UsuarioServicio {
+    +ObtenerTodos() : IReadOnlyList<Usuario>
     +Registrar(usuario, contrasena) : Resultado<Usuario>
     +Editar(usuario) : Resultado
     +Desactivar(id) : Resultado
@@ -228,16 +273,17 @@ package "Servicios" {
     +Buscar(filtro : FiltroHabitacion) : IReadOnlyList<Habitacion>
     +CambiarEstado(id, nuevo) : Resultado
     +Liberar(id) : Resultado
+    +ReservadasHoy() : ISet<int>
   }
   class HuespedServicio {
     +Registrar(huesped) : Resultado<Huesped>
     +Editar(huesped) : Resultado
     +Eliminar(id) : Resultado
-    +Buscar(texto) : IReadOnlyList<Huesped>
+    +Buscar(texto, incluirInactivos) : IReadOnlyList<Huesped>
     +HistorialEstadias(huespedId) : IReadOnlyList<EstadiaHistorial>
   }
   class ReservaServicio {
-    +BuscarDisponibles(entrada, salida, personas, tipo) : IReadOnlyList<Habitacion>
+    +BuscarDisponibles(entrada, salida, personas, tipo, excluirReservaId) : IReadOnlyList<Habitacion>
     +Crear(huespedId, habitacionId, entrada, salida, personas, confirmar) : Resultado<Reserva>
     +Modificar(id, habitacionId, entrada, salida, personas) : Resultado
     +Confirmar(id) : Resultado
@@ -247,10 +293,11 @@ package "Servicios" {
     +HuespedesEnCasa() : IReadOnlyList<Reserva>
   }
   class EstadiaServicio {
+    +ObtenerServicios() : IReadOnlyList<ServicioAdicional>
     +CheckIn(reservaId, habitacionId?) : Resultado
     +AgregarCargo(reservaId, servicioId, cantidad) : Resultado
-    +CheckOut(reservaId, porcentajeDescuento) : Resultado<Factura>
     +PrevisualizarFactura(reservaId, porcentajeDescuento) : Resultado<Factura>
+    +CheckOut(reservaId, porcentajeDescuento) : Resultado<Factura>
   }
   class FacturacionServicio {
     +RegistrarPago(facturaId, pago) : Resultado
@@ -260,10 +307,18 @@ package "Servicios" {
   }
   class ReporteServicio {
     +Indicadores() : IndicadoresInicio
-    +SerieMensual(serie, meses) : IReadOnlyList<PuntoMensual>
+    +SerieMensual(serie : SerieReporte, meses) : IReadOnlyList<PuntoMensual>
     +HabitacionesPorEstado() : IReadOnlyList<ConteoEstado>
-    +CobradoVsPendiente() : (decimal Cobrado, decimal Pendiente)
   }
+  class FiltroHabitacion <<record>>
+  class FiltroReserva <<record>>
+  class FiltroFactura <<record>>
+  class EstadiaHistorial <<record>>
+  class ResumenFacturacion <<record>>
+  class IndicadoresInicio <<record>>
+  class PuntoMensual <<record>>
+  class ConteoEstado <<record>>
+  enum SerieReporte { Ingresos; Reservas; Ocupacion }
 }
 
 IValidable <|.. EntidadBase
@@ -281,15 +336,23 @@ Pago <|-- PagoTransferencia
 IReloj <|.. RelojSistema
 IReloj <|.. RelojFijo
 IRepositorio <|.. RepositorioJson
-ResultadoT --|> Resultado
+Resultado <|-- ResultadoT
+ServicioBase <|-- AutenticacionServicio
+ServicioBase <|-- UsuarioServicio
+ServicioBase <|-- HabitacionServicio
+ServicioBase <|-- HuespedServicio
+ServicioBase <|-- ReservaServicio
+ServicioBase <|-- EstadiaServicio
+ServicioBase <|-- FacturacionServicio
+ServicioBase <|-- ReporteServicio
 
 Reserva *-- "0..*" CargoAdicional
 Factura *-- "1..*" LineaFactura
 Factura *-- "0..*" Pago
-Reserva "0..*" --> "1" Huesped
-Reserva "0..*" --> "1" Habitacion
-Factura "0..*" --> "1" Reserva
-CargoAdicional "0..*" ..> "1" ServicioAdicional
+Reserva "0..*" --> "1" Huesped : HuespedId
+Reserva "0..*" --> "1" Habitacion : HabitacionId
+Factura "0..*" --> "1" Reserva : ReservaId
+CargoAdicional "0..*" ..> "1" ServicioAdicional : ServicioId
 Habitacion --> EstadoHabitacion
 Reserva --> EstadoReserva
 Factura --> EstadoFactura
@@ -300,19 +363,27 @@ ServicioAdicional --> CategoriaServicio
 
 ContextoDatos *-- "6" RepositorioJson
 ContextoDatos *-- "1" ConfiguracionHotel
+RepositorioJson ..> JsonConfig
+RepositorioJson ..> ArchivoJson
 DatosSemilla ..> ContextoDatos
+DatosSemilla ..> ServiciosHotel
 
+ServiciosHotel *-- AutenticacionServicio
+ServiciosHotel *-- UsuarioServicio
+ServiciosHotel *-- HabitacionServicio
+ServiciosHotel *-- HuespedServicio
+ServiciosHotel *-- ReservaServicio
+ServiciosHotel *-- EstadiaServicio
+ServiciosHotel *-- FacturacionServicio
+ServiciosHotel *-- ReporteServicio
 AutenticacionServicio ..> IRepositorio
-UsuarioServicio ..> IRepositorio
-HabitacionServicio ..> IRepositorio
-HuespedServicio ..> IRepositorio
-ReservaServicio ..> IRepositorio
-ReservaServicio ..> IReloj
-EstadiaServicio ..> IRepositorio
-EstadiaServicio ..> IReloj
-EstadiaServicio ..> Factura
-FacturacionServicio ..> IRepositorio
-FacturacionServicio ..> AutenticacionServicio
 UsuarioServicio ..> AutenticacionServicio
-ReporteServicio ..> IRepositorio
+HabitacionServicio ..> AutenticacionServicio
+FacturacionServicio ..> AutenticacionServicio
+ReservaServicio ..> IReloj
+EstadiaServicio ..> IReloj
+EstadiaServicio ..> Factura : Generar
+ReservaServicio ..> FiltroReserva
+HabitacionServicio ..> FiltroHabitacion
+FacturacionServicio ..> FiltroFactura
 @enduml

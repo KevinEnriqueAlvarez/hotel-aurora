@@ -3,10 +3,6 @@ using Hotel.UI.Tema;
 
 namespace Hotel.UI.Controles;
 
-/// <summary>Segmento de la dona.</summary>
-/// <remarks>E1</remarks>
-public record SegmentoDona(string Nombre, decimal Valor, Color Color);
-
 /// <summary>Gráfico de dona con total al centro y leyenda con conteo y porcentaje.</summary>
 /// <remarks>E1; sección 11</remarks>
 [ToolboxItem(true)]
