@@ -8,6 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
     <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <NoWarn>$(NoWarn);WFO1000</NoWarn>
     <AssemblyName>HotelAurora</AssemblyName>
     <RootNamespace>Hotel.UI</RootNamespace>
   </PropertyGroup>
