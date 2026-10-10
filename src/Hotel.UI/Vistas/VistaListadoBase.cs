@@ -44,6 +44,9 @@ public partial class VistaListadoBase : VistaBase
     /// <summary>Tabla del listado.</summary>
     protected DataGridView Tabla => tabla;
 
+    /// <summary>Botón Editar (las vistas lo deshabilitan según el estado de la fila).</summary>
+    protected BotonModerno BotonEditar => btnEditar;
+
     /// <summary>Zona donde las vistas hijas agregan sus filtros.</summary>
     protected FlowLayoutPanel PanelFiltros => flpFiltros;
 
@@ -129,7 +132,7 @@ public partial class VistaListadoBase : VistaBase
         btnEditar.Enabled = hay;
         btnEliminar.Enabled = hay;
         btnDetalle.Enabled = hay;
-        AlCambiarSeleccion();
+        AlCambiarSeleccion();   // las vistas hijas pueden refinar la habilitación
     }
 
     private void TxtBuscar_TextChanged(object? sender, EventArgs e) => CargarDatos();
