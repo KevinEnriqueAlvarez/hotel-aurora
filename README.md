@@ -1,11 +1,9 @@
 # Hotel Aurora — Sistema de Reservas
 
-[![CI](https://github.com/USUARIO/hotel-aurora/actions/workflows/ci.yml/badge.svg)](https://github.com/USUARIO/hotel-aurora/actions/workflows/ci.yml)
+[![CI](https://github.com/KevinEnriqueAlvarez/hotel-aurora/actions/workflows/ci.yml/badge.svg)](https://github.com/KevinEnriqueAlvarez/hotel-aurora/actions/workflows/ci.yml)
 
 Aplicación de escritorio para gestionar las **habitaciones, huéspedes, reservas, check-in/check-out, cargos y facturación** de un hotel mediano.
 Proyecto Integrador de Programación II (USPG) — C# · .NET 10 · Windows Forms · JSON · xUnit.
-
-> Reemplace `USUARIO` en la insignia por su usuario u organización de GitHub.
 
 ## Características
 
