@@ -1,0 +1,318 @@
+@startuml clases
+title Hotel Aurora — Diagrama de clases (Hotel.Core)
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+package "Interfaces" {
+  interface IValidable {
+    +Validar() : IEnumerable<string>
+  }
+  interface IRepositorio<T> {
+    +ObtenerTodos(incluirInactivos : bool) : IReadOnlyList<T>
+    +ObtenerPorId(id : int) : T?
+    +Buscar(criterio : Func<T,bool>) : IEnumerable<T>
+    +Agregar(entidad : T)
+    +Actualizar(entidad : T)
+    +Eliminar(id : int)
+  }
+  interface IReloj {
+    +Ahora : DateTime
+    +Hoy : DateTime
+  }
+}
+
+package "Comun" {
+  class RelojSistema
+  class RelojFijo {
+    +Ahora : DateTime {set}
+  }
+  class Resultado {
+    +Exito : bool
+    +Mensaje : string
+    +Errores : IReadOnlyList<string>
+    {static} +Ok() : Resultado
+    {static} +Fallo(mensaje : string) : Resultado
+  }
+  class "Resultado<T>" as ResultadoT {
+    +Valor : T?
+  }
+  class ReglaNegocioException
+  class Validador <<static>>
+  class Constantes <<static>>
+}
+
+package "Dominio" {
+  enum TipoDocumento { Dpi; Pasaporte }
+  enum RolUsuario { Administrador; Recepcionista }
+  enum TipoHabitacion { Sencilla; Doble; Suite; Familiar }
+  enum EstadoHabitacion { Disponible; Ocupada; Limpieza; Mantenimiento }
+  enum EstadoReserva { Pendiente; Confirmada; EnCurso; Finalizada; Cancelada }
+  enum CategoriaServicio { Restaurante; Minibar; Lavanderia; Spa; Transporte; Otro }
+  enum EstadoFactura { Emitida; Pagada; Anulada }
+
+  abstract class EntidadBase {
+    +Id : int
+    +FechaCreacion : DateTime
+    +Activo : bool
+    {abstract} +Validar() : IEnumerable<string>
+  }
+  abstract class Persona {
+    +Nombres : string
+    +Apellidos : string
+    +TipoDocumento : TipoDocumento
+    +NumeroDocumento : string
+    +Telefono : string
+    +Correo : string
+    +NombreCompleto : string
+    +Validar() : IEnumerable<string>
+  }
+  class Huesped {
+    +Nacionalidad : string
+    +FechaNacimiento : DateTime
+    +Nit : string
+    +Notas : string
+    +Validar() : IEnumerable<string>
+    +Validar(hoy : DateTime) : IEnumerable<string>
+  }
+  class Usuario {
+    +NombreUsuario : string
+    +Rol : RolUsuario
+    +HashContrasena : string {private set}
+    +Sal : string {private set}
+    +EstablecerContrasena(texto : string)
+    +VerificarContrasena(texto : string) : bool
+  }
+  class Habitacion {
+    +Numero : string
+    +Piso : int
+    +Tipo : TipoHabitacion
+    +Capacidad : int
+    +TarifaNoche : decimal
+    +Descripcion : string
+    +Estado : EstadoHabitacion {private set}
+    +CambiarEstado(nuevo : EstadoHabitacion)
+  }
+  class Reserva {
+    +Codigo : string
+    +HuespedId : int
+    +HabitacionId : int
+    +FechaEntrada : DateTime
+    +FechaSalida : DateTime
+    +CantidadPersonas : int
+    +TarifaPactada : decimal
+    +Estado : EstadoReserva {private set}
+    +MotivoCancelacion : string? {private set}
+    +FechaCheckIn : DateTime? {private set}
+    +FechaCheckOut : DateTime? {private set}
+    +Cargos : IReadOnlyList<CargoAdicional>
+    +Noches : int
+    +TotalAlojamiento : decimal
+    +TotalCargos : decimal
+    +Confirmar()
+    +Cancelar(motivo : string)
+    +RegistrarCheckIn(fecha : DateTime)
+    +RegistrarCheckOut(fecha : DateTime)
+    +AgregarCargo(cargo : CargoAdicional)
+    +CambiarFechas(entrada : DateTime, salida : DateTime, personas : int)
+    +ReasignarHabitacion(habitacionId : int, tarifa : decimal)
+    +SeSolapaCon(entrada : DateTime, salida : DateTime) : bool
+    +NochesCobradas(fechaSalidaReal : DateTime) : int
+  }
+  class ServicioAdicional {
+    +Nombre : string
+    +Categoria : CategoriaServicio
+    +Precio : decimal
+  }
+  class CargoAdicional <<valor>> {
+    +ServicioId : int
+    +Descripcion : string
+    +Cantidad : int
+    +PrecioUnitario : decimal
+    +Fecha : DateTime
+    +Subtotal : decimal
+  }
+  class LineaFactura <<valor>> {
+    +Concepto : string
+    +Cantidad : int
+    +PrecioUnitario : decimal
+    +Subtotal : decimal
+  }
+  class Factura {
+    +Numero : string
+    +ReservaId : int
+    +HuespedId : int
+    +NitCliente : string
+    +NombreCliente : string
+    +FechaEmision : DateTime
+    +Lineas : IReadOnlyList<LineaFactura>
+    +PorcentajeDescuento : decimal
+    +Subtotal : decimal
+    +Descuento : decimal
+    +Iva : decimal
+    +ImpuestoTurismo : decimal
+    +Total : decimal
+    +Estado : EstadoFactura {private set}
+    +MotivoAnulacion : string? {private set}
+    +Pagos : IReadOnlyList<Pago>
+    +TotalPagado : decimal
+    +Saldo : decimal
+    {static} +Generar(reserva, habitacion, huesped, configuracion, porcentajeDescuento, fecha) : Factura
+    +RegistrarPago(pago : Pago)
+    +Anular(motivo : string)
+  }
+  abstract class Pago {
+    +Monto : decimal
+    +Fecha : DateTime
+    {abstract} +Metodo : string
+    {abstract} +Detalle() : string
+    +Validar() : IEnumerable<string>
+  }
+  class PagoEfectivo {
+    +MontoRecibido : decimal
+    +Cambio : decimal
+  }
+  class PagoTarjeta {
+    +UltimosCuatroDigitos : string
+    +NumeroAutorizacion : string
+  }
+  class PagoTransferencia {
+    +Banco : string
+    +NumeroReferencia : string
+  }
+  class ConfiguracionHotel {
+    +NombreHotel : string
+    +Nit : string
+    +Direccion : string
+    +Telefono : string
+    +PorcentajeIva : decimal
+    +PorcentajeTurismo : decimal
+    +MaxNochesPorReserva : int
+    +DescuentoMaximo : decimal
+  }
+}
+
+package "Datos" {
+  class JsonConfig <<static>>
+  class "RepositorioJson<T>" as RepositorioJson
+  class ContextoDatos {
+    +Usuarios : IRepositorio<Usuario>
+    +Habitaciones : IRepositorio<Habitacion>
+    +Huespedes : IRepositorio<Huesped>
+    +Servicios : IRepositorio<ServicioAdicional>
+    +Reservas : IRepositorio<Reserva>
+    +Facturas : IRepositorio<Factura>
+    +Configuracion : ConfiguracionHotel
+    +Avisos : IReadOnlyList<string>
+  }
+  class DatosSemilla <<static>> {
+    {static} +SembrarSiVacio(contexto : ContextoDatos, hoy : DateTime) : bool
+  }
+}
+
+package "Servicios" {
+  class AutenticacionServicio {
+    +UsuarioActual : Usuario?
+    +IniciarSesion(usuario, contrasena) : Resultado<Usuario>
+    +CerrarSesion()
+  }
+  class UsuarioServicio {
+    +Registrar(usuario, contrasena) : Resultado<Usuario>
+    +Editar(usuario) : Resultado
+    +Desactivar(id) : Resultado
+    +RestablecerContrasena(id, nueva) : Resultado
+  }
+  class HabitacionServicio {
+    +Registrar(habitacion) : Resultado<Habitacion>
+    +Editar(habitacion) : Resultado
+    +Eliminar(id) : Resultado
+    +Buscar(filtro : FiltroHabitacion) : IReadOnlyList<Habitacion>
+    +CambiarEstado(id, nuevo) : Resultado
+    +Liberar(id) : Resultado
+  }
+  class HuespedServicio {
+    +Registrar(huesped) : Resultado<Huesped>
+    +Editar(huesped) : Resultado
+    +Eliminar(id) : Resultado
+    +Buscar(texto) : IReadOnlyList<Huesped>
+    +HistorialEstadias(huespedId) : IReadOnlyList<EstadiaHistorial>
+  }
+  class ReservaServicio {
+    +BuscarDisponibles(entrada, salida, personas, tipo) : IReadOnlyList<Habitacion>
+    +Crear(huespedId, habitacionId, entrada, salida, personas, confirmar) : Resultado<Reserva>
+    +Modificar(id, habitacionId, entrada, salida, personas) : Resultado
+    +Confirmar(id) : Resultado
+    +Cancelar(id, motivo) : Resultado
+    +Buscar(filtro : FiltroReserva) : IReadOnlyList<Reserva>
+    +LlegadasDelDia() : IReadOnlyList<Reserva>
+    +HuespedesEnCasa() : IReadOnlyList<Reserva>
+  }
+  class EstadiaServicio {
+    +CheckIn(reservaId, habitacionId?) : Resultado
+    +AgregarCargo(reservaId, servicioId, cantidad) : Resultado
+    +CheckOut(reservaId, porcentajeDescuento) : Resultado<Factura>
+    +PrevisualizarFactura(reservaId, porcentajeDescuento) : Resultado<Factura>
+  }
+  class FacturacionServicio {
+    +RegistrarPago(facturaId, pago) : Resultado
+    +Anular(facturaId, motivo) : Resultado
+    +Buscar(filtro : FiltroFactura) : IReadOnlyList<Factura>
+    +ResumenPeriodo(desde, hasta) : ResumenFacturacion
+  }
+  class ReporteServicio {
+    +Indicadores() : IndicadoresInicio
+    +SerieMensual(serie, meses) : IReadOnlyList<PuntoMensual>
+    +HabitacionesPorEstado() : IReadOnlyList<ConteoEstado>
+    +CobradoVsPendiente() : (decimal Cobrado, decimal Pendiente)
+  }
+}
+
+IValidable <|.. EntidadBase
+IValidable <|.. Pago
+EntidadBase <|-- Persona
+EntidadBase <|-- Habitacion
+EntidadBase <|-- Reserva
+EntidadBase <|-- ServicioAdicional
+EntidadBase <|-- Factura
+Persona <|-- Huesped
+Persona <|-- Usuario
+Pago <|-- PagoEfectivo
+Pago <|-- PagoTarjeta
+Pago <|-- PagoTransferencia
+IReloj <|.. RelojSistema
+IReloj <|.. RelojFijo
+IRepositorio <|.. RepositorioJson
+ResultadoT --|> Resultado
+
+Reserva *-- "0..*" CargoAdicional
+Factura *-- "1..*" LineaFactura
+Factura *-- "0..*" Pago
+Reserva "0..*" --> "1" Huesped
+Reserva "0..*" --> "1" Habitacion
+Factura "0..*" --> "1" Reserva
+CargoAdicional "0..*" ..> "1" ServicioAdicional
+Habitacion --> EstadoHabitacion
+Reserva --> EstadoReserva
+Factura --> EstadoFactura
+Persona --> TipoDocumento
+Usuario --> RolUsuario
+Habitacion --> TipoHabitacion
+ServicioAdicional --> CategoriaServicio
+
+ContextoDatos *-- "6" RepositorioJson
+ContextoDatos *-- "1" ConfiguracionHotel
+DatosSemilla ..> ContextoDatos
+
+AutenticacionServicio ..> IRepositorio
+UsuarioServicio ..> IRepositorio
+HabitacionServicio ..> IRepositorio
+HuespedServicio ..> IRepositorio
+ReservaServicio ..> IRepositorio
+ReservaServicio ..> IReloj
+EstadiaServicio ..> IRepositorio
+EstadiaServicio ..> IReloj
+EstadiaServicio ..> Factura
+FacturacionServicio ..> IRepositorio
+FacturacionServicio ..> AutenticacionServicio
+UsuarioServicio ..> AutenticacionServicio
+ReporteServicio ..> IRepositorio
+@enduml

@@ -1,0 +1,28 @@
+@startuml secuencia-crear-reserva
+title Secuencia — Crear reserva (CU-04, RF-14)
+actor Recepcionista
+participant FormReserva
+participant ReservaServicio
+participant "IRepositorio<Reserva>" as RepoRes
+participant "IRepositorio<Habitacion>" as RepoHab
+database "reservas.json" as Json
+
+Recepcionista -> FormReserva : indica fechas, personas, tipo, huésped
+FormReserva -> ReservaServicio : BuscarDisponibles(entrada, salida, personas, tipo)
+ReservaServicio -> RepoHab : ObtenerTodos()
+ReservaServicio -> RepoRes : Buscar(activas)
+ReservaServicio --> FormReserva : habitaciones disponibles
+Recepcionista -> FormReserva : elige habitación y pulsa Guardar
+FormReserva -> ReservaServicio : Crear(huespedId, habitacionId, entrada, salida, personas, confirmar)
+ReservaServicio -> RepoHab : ObtenerPorId(habitacionId)
+ReservaServicio -> RepoRes : Buscar(solapadas con la habitación)
+alt solapamiento (RN-03) o regla violada (RN-02, RN-04)
+  ReservaServicio --> FormReserva : Resultado.Fallo(mensaje)
+  FormReserva --> Recepcionista : muestra el error
+else sin conflictos
+  ReservaServicio -> RepoRes : Agregar(reserva)
+  RepoRes -> Json : escribe .tmp y File.Move (atómico)
+  ReservaServicio --> FormReserva : Resultado<Reserva>.Ok(RES-######)
+  FormReserva --> Recepcionista : confirmación
+end
+@enduml

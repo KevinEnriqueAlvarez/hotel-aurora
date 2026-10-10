@@ -1,0 +1,46 @@
+@startuml actividad-estadia
+title Actividad — Ciclo de una estadía
+|Recepcionista|
+start
+:Consulta disponibilidad;
+:Registra o busca huésped;
+:Crea reserva (Pendiente/Confirmada);
+|Sistema|
+:Valida RN-02 a RN-04;
+if (¿Solapamiento o regla violada?) then (sí)
+  :Rechaza y muestra el error;
+  |Recepcionista|
+  stop
+else (no)
+  :Guarda reserva RES-######;
+endif
+|Recepcionista|
+:Llegada del huésped: check-in;
+|Sistema|
+:Valida RN-07;
+:Reserva → EnCurso\nHabitación → Ocupada;
+|Recepcionista|
+while (¿Consumos durante la estadía?) is (sí)
+  :Registra cargo adicional;
+  |Sistema|
+  :Agrega cargo a la reserva (RN-08);
+  |Recepcionista|
+endwhile (no)
+:Check-out (descuento opcional);
+|Sistema|
+:Calcula noches cobradas (RN-09);
+:Genera factura FAC-###### (RN-11);
+:Reserva → Finalizada\nHabitación → Limpieza;
+|Recepcionista|
+:Registra pago(s);
+|Sistema|
+:Valida monto ≤ saldo (RN-12);
+if (¿Saldo = 0?) then (sí)
+  :Factura → Pagada;
+else (no)
+  :Factura sigue Emitida con saldo;
+endif
+|Recepcionista|
+:Libera la habitación (Limpieza → Disponible);
+stop
+@enduml

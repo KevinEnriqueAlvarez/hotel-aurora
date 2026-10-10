@@ -1,0 +1,11 @@
+@startuml estados-habitacion
+title Diagrama de estados — Habitación (RN-10)
+[*] --> Disponible : Registrar
+Disponible --> Mantenimiento : CambiarEstado (manual)
+Mantenimiento --> Disponible : CambiarEstado (manual)
+Disponible --> Ocupada : Check-in
+Ocupada --> Limpieza : Check-out
+Limpieza --> Disponible : Liberar
+note bottom of Ocupada : Solo cambia por check-in/check-out
+note bottom of Disponible : «Reservada hoy» se calcula, no se guarda
+@enduml

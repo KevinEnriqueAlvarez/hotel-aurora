@@ -1,0 +1,13 @@
+@startuml estados-reserva
+title Diagrama de estados — Reserva (RN-05)
+[*] --> Pendiente : Crear
+Pendiente --> Confirmada : Confirmar()
+Pendiente --> Cancelada : Cancelar(motivo)
+Confirmada --> Cancelada : Cancelar(motivo)
+Confirmada --> EnCurso : RegistrarCheckIn()
+EnCurso --> Finalizada : RegistrarCheckOut()
+Finalizada --> [*]
+Cancelada --> [*]
+note right of Cancelada : El motivo es obligatorio
+note right of EnCurso : Solo aquí se agregan cargos (RN-08)
+@enduml

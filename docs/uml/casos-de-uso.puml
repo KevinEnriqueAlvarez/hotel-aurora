@@ -1,0 +1,51 @@
+@startuml casos-de-uso
+title Hotel Aurora — Casos de uso
+left to right direction
+actor Recepcionista
+actor Administrador
+actor "Huésped" as Huesped <<secundario>>
+
+Administrador --|> Recepcionista
+
+rectangle "Sistema de Reservas Hotel Aurora" {
+  usecase "CU-01 Iniciar sesión" as CU01
+  usecase "CU-02 Gestionar habitaciones" as CU02
+  usecase "CU-03 Gestionar huéspedes" as CU03
+  usecase "CU-04 Crear reserva" as CU04
+  usecase "CU-05 Modificar/cancelar reserva" as CU05
+  usecase "CU-06 Realizar check-in" as CU06
+  usecase "CU-07 Registrar cargo adicional" as CU07
+  usecase "CU-08 Realizar check-out" as CU08
+  usecase "CU-09 Registrar pago" as CU09
+  usecase "CU-10 Anular factura" as CU10
+  usecase "CU-11 Consultar historiales" as CU11
+  usecase "CU-12 Gestionar usuarios" as CU12
+  usecase "Verificar disponibilidad" as VD
+  usecase "Generar factura" as GF
+}
+
+Recepcionista --> CU01
+Recepcionista --> CU03
+Recepcionista --> CU04
+Recepcionista --> CU05
+Recepcionista --> CU06
+Recepcionista --> CU07
+Recepcionista --> CU08
+Recepcionista --> CU09
+Recepcionista --> CU11
+Administrador --> CU02
+Administrador --> CU10
+Administrador --> CU12
+
+CU04 ..> VD : <<include>>
+CU05 ..> VD : <<include>>
+CU08 ..> GF : <<include>>
+CU04 ..> CU03 : <<extend>> nuevo huésped
+CU08 ..> CU09 : <<extend>> cobrar
+CU10 ..> CU11 : <<include>> localizar factura
+CU02 ..> CU01 : <<include>>
+CU12 ..> CU01 : <<include>>
+
+Huesped .. CU04
+Huesped .. CU08
+@enduml

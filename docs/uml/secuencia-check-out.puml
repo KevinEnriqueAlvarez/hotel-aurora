@@ -1,0 +1,27 @@
+@startuml secuencia-check-out
+title Secuencia — Check-out con factura (CU-08, RF-21, RF-22)
+actor Recepcionista
+participant FormCheckOut
+participant EstadiaServicio
+participant Reserva
+participant Factura
+participant Habitacion
+participant "IRepositorio<Factura>" as RepoFac
+participant "IRepositorio<Reserva>" as RepoRes
+participant "IRepositorio<Habitacion>" as RepoHab
+
+Recepcionista -> FormCheckOut : selecciona huésped en casa
+FormCheckOut -> EstadiaServicio : PrevisualizarFactura(reservaId, %descuento)
+EstadiaServicio --> FormCheckOut : estado de cuenta
+Recepcionista -> FormCheckOut : confirma check-out
+FormCheckOut -> EstadiaServicio : CheckOut(reservaId, %descuento)
+EstadiaServicio -> Reserva : RegistrarCheckOut(ahora)  [EnCurso → Finalizada]
+EstadiaServicio -> Factura : Generar(reserva, habitacion, huesped, config, %desc, fecha)
+Factura --> EstadiaServicio : factura (Emitida)
+EstadiaServicio -> Habitacion : CambiarEstado(Limpieza)  [Ocupada → Limpieza]
+EstadiaServicio -> RepoFac : Agregar(factura) con FAC-######
+EstadiaServicio -> RepoRes : Actualizar(reserva)
+EstadiaServicio -> RepoHab : Actualizar(habitacion)
+EstadiaServicio --> FormCheckOut : Resultado<Factura>.Ok
+FormCheckOut --> Recepcionista : abre la factura generada
+@enduml
